@@ -5,7 +5,6 @@
 - [Descripción](#Descripción)
 - [Justificación ](#Justificación)
 - [Uso de las librerías](#Uso-de-las-librerías)
-- [Habilidades](#Habilidades)
 - [Acerca de mí](#Acerca-de-mí)
 - [Contacto](#Contacto)
 - [Apoyame](#Apoyame)
