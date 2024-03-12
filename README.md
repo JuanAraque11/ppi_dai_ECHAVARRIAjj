@@ -1,8 +1,8 @@
-## Un mundo en tu plato
+# Un mundo en tu plato
 
-# Tabla de cotenido
+## Tabla de cotenido
 
-# Ideas
+## Ideas
 
 1. **Global Recipe Explorer**
    - *Descripción de la idea:* Una aplicación que permite a los usuarios explorar y descubrir recetas auténticas de diferentes partes del mundo, con información detallada sobre ingredientes, métodos de preparación y datos nutricionales.
