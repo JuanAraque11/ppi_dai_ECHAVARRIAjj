@@ -1,12 +1,22 @@
 # Un mundo en tu plato
 
+## Tabla de contenido
+
+- [Descripción](#Descripción)
+- [Justificación ](#Justificación)
+- [Uso de las librerías](#Uso-de-las-librerías)
+- [Habilidades](#Habilidades)
+- [Acerca de mí](#Acerca-de-mí)
+- [Contacto](#Contacto)
+- [Apoyame](#Apoyame)
+
 ## Descripción
 
 Una aplicación que permite a los usuarios explorar y descubrir recetas auténticas de diferentes partes del mundo, con información detallada sobre ingredientes, métodos de preparación y datos nutricionales.
 
 ## Justificación 
 
-La gastronomía internacional es un tema de interés global, y muchas personas buscan experiencias culinarias auténticas. Esta aplicación puede satisfacer esa demanda y atraer a un amplio público interesado en descubrir nuevas recetas de diferentes culturas.
+La gastronomía internacional es un tema de interés global, y cada vez son más las personas que buscan experiencias culinarias auténticas. "Un mundo en tu plato" satisface esa demanda, brindando acceso a una amplia variedad de recetas de diferentes culturas, desde platos tradicionales hasta opciones más innovadoras. A diferencia de otras aplicaciones de recetas, "Un mundo en tu plato" se centra en la autenticidad de las recetas y ofrece información completa sobre los ingredientes y la preparación.
 
 ## Uso de las librerías
 
@@ -18,7 +28,7 @@ La gastronomía internacional es un tema de interés global, y muchas personas b
 
 ## Acerca de mí
 
-Soy Juan José Echavarria Araque, estudiante de Ingeniería de Sistemas en la Universidad Nacional de Colombia sede Medellín Facultad de Minas, actualmente cursando septimo semestre. Poseo conocimientos en una variedad de lenguajes de programación, incluyendo Python, Java, SQL, C, entre otros. Mi pasión por la tecnología y el desarrollo de software me impulsa a buscar oportunidades para aplicar y mejorar mis habilidades en proyectos desafiantes.
+Soy Juan José Echavarria Araque, estudiante de Ingeniería de Sistemas en la Universidad Nacional de Colombia sede Medellín Facultad de Minas, actualmente cursando septimo semestre. Poseo conocimientos en una variedad de lenguajes de programación, incluyendo Python, Java, SQL, C, entre otros. Mi pasión por la tecnología, la gastronimía y el desarrollo de software me impulsa a buscar oportunidades para aplicar y mejorar mis habilidades en proyectos desafiantes.
 
 ## Contacto
 
