@@ -3,9 +3,6 @@
 ## Tabla de cotenido
 
 [Ideas](#Ideas)
-   [Global Recipe Explorer](#1.-**Global-Recipe-Explorer**)
-   [Foodie Tour Companion](#Foodie-Tour-Companion)
-
 [Sección 2](#sección-2)
 
 
