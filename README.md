@@ -33,6 +33,12 @@ Soy Juan José Echavarria Araque, estudiante de Ingeniería de Sistemas en la Un
 
 Si estás interesado en mi trabajo, tienes alguna consulta o sugerencia no dudes en ponerte en contacto conmigo a través de [Gmail](mailto:jechavarriaa@unal.edu.co) o por medio de [LinkedIn](https://www.linkedin.com/in/juan-jose-echavarria-araque-a92286296?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BN9njGT2wSqSVssRkJVAMYQ%3D%3D).
 
+También puedes encontrar mis servicios en las siguientes plataformas.
+
+- [Upwork](https://www.upwork.com/workwith/juanjosee)
+- [Fiverr](https://www.fiverr.com/juanjechav?public_mode=true)
+- [Freelancer](https://www.freelancer.com/u/JuanJEchav?sb=t)
+
 ## Apoyame
 
 (agregar perfil de buy me a coffee)
