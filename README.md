@@ -27,7 +27,7 @@ La gastronomía internacional es un tema de interés global, y cada vez son más
 
 ## Acerca de mí
 
-Soy Juan José Echavarria Araque, estudiante de Ingeniería de Sistemas en la Universidad Nacional de Colombia sede Medellín Facultad de Minas, actualmente cursando septimo semestre. Poseo conocimientos en una variedad de lenguajes de programación, incluyendo Python, Java, SQL, C, entre otros. Mi pasión por la tecnología, la gastronimía y el desarrollo de software me impulsa a buscar oportunidades para aplicar y mejorar mis habilidades en proyectos desafiantes.
+Soy Juan Araque, estudiante de Ingeniería de Sistemas en la Universidad Nacional de Colombia sede Medellín Facultad de Minas, actualmente cursando septimo semestre. Poseo conocimientos en una variedad de lenguajes de programación, incluyendo Python, Java, SQL, C, entre otros. Mi pasión por la tecnología, la gastronimía y el desarrollo de software me impulsa a buscar oportunidades para aplicar y mejorar mis habilidades en proyectos desafiantes.
 
 ## Contacto
 
