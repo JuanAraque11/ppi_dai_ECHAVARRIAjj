@@ -28,11 +28,9 @@ def main():
     else:
         # Limpiar la página
         st.empty()
-        # Mostrar contenido diferente
-        st.write("¡Bienvenido! Aquí hay contenido especial para usuarios autenticados.")
         # Mostrar la página secundaria
         mostrar_pagina_secundaria()
-        
+
     if st.button("Ver lista de usuarios"):
         register.show_registered_users()
     info.info()
