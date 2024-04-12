@@ -37,10 +37,6 @@ def register():
             st.success("Usuario registrado exitosamente. Por favor, inicia sesión.")
 
 
-# Función para mostrar usuarios registrados
-def show_registered_users():
-    st.subheader("Usuarios registrados")
-    st.write(list(registered_users.keys()))
 
 
 # Página principal
