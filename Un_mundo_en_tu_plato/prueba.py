@@ -28,7 +28,7 @@ def main():
         # Una vez iniciada la sesión, mostrar otro tipo de contenido
         st.write("¡Bienvenido! Aquí hay contenido especial para usuarios autenticados.")
         # Por ejemplo, puedes mostrar el contenido de otro archivo o módulo
-        info()
+        info.info()
 
 if __name__ == "__main__":
     main()
