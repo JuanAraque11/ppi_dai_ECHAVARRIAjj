@@ -1,4 +1,5 @@
 import streamlit as st
+import info
 import login
 import register
 
@@ -26,6 +27,8 @@ def main():
         register.register_user()
     if st.button("Ver lista de usuarios"):
         register.show_registered_users()
+    info.info()
+
 
 if __name__ == "__main__":
     main()
