@@ -2,7 +2,7 @@ import streamlit as st
 
 # Título y autor
 st.title("Un mundo en tu plato")
-st.write("Autor: Esta app fue elaborada por Juan José")
+st.write("Autor: Esta app fue elaborada por Juan Jos")
 
 # Registro de usuarios (inicialmente vacío)
 registered_users = {}
