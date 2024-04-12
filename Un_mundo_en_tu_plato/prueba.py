@@ -1,6 +1,7 @@
 import streamlit as st
 import info
 import login
+from inicio_sesion import mostrar_pagina_secundaria
 import register
 
 # Título y autor
@@ -24,6 +25,14 @@ Comparte tus descubrimientos culinarios con amigos y familiares en las redes soc
 def main():
     if not login.login_user():
         register.register_user()
+    else:
+        # Limpiar la página
+        st.empty()
+        # Mostrar contenido diferente
+        st.write("¡Bienvenido! Aquí hay contenido especial para usuarios autenticados.")
+        # Mostrar la página secundaria
+        mostrar_pagina_secundaria()
+        
     if st.button("Ver lista de usuarios"):
         register.show_registered_users()
     info.info()
