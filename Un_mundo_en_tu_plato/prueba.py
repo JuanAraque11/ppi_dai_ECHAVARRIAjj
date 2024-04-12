@@ -23,6 +23,7 @@ def login():
             st.error("Usuario no registrado")
     return False
 
+
 # Función para registrar usuario
 def register():
     st.subheader("Registro de usuario")
@@ -34,6 +35,13 @@ def register():
         else:
             registered_users[new_username] = new_password
             st.success("Usuario registrado exitosamente. Por favor, inicia sesión.")
+
+
+# Función para mostrar usuarios registrados
+def show_registered_users():
+    st.subheader("Usuarios registrados")
+    st.write(list(registered_users.keys()))
+
 
 # Página principal
 def main():
