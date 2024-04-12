@@ -2,16 +2,10 @@ import streamlit as st
 
 # Título y autor
 st.title("Un mundo en tu plato")
-st.write("Autor: Esta app fue elaborada por Juan Jos")
+st.write("Autor: Esta app fue elaborada por Juan José")
 
 # Registro de usuarios (inicialmente vacío)
 registered_users = {}
-
-# Función para mostrar usuarios registrados
-def show_registered_users():
-    st.subheader("Usuarios registrados")
-    st.write(list(registered_users.keys()))
-
 
 # Función para iniciar sesión
 def login():
@@ -29,7 +23,6 @@ def login():
             st.error("Usuario no registrado")
     return False
 
-
 # Función para registrar usuario
 def register():
     st.subheader("Registro de usuario")
@@ -42,14 +35,18 @@ def register():
             registered_users[new_username] = new_password
             st.success("Usuario registrado exitosamente. Por favor, inicia sesión.")
 
-
-
+# Función para mostrar usuarios registrados
+def show_registered_users():
+    st.subheader("Usuarios registrados")
+    st.write(list(registered_users.keys()))
 
 # Página principal
 def main():
     st.write("Bienvenidos a mi app")
     if not login():
         register()
+    if st.button("Ver lista de usuarios"):
+        show_registered_users()
 
 if __name__ == "__main__":
     main()
