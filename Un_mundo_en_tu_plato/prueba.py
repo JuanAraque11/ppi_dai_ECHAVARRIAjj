@@ -35,11 +35,4 @@ def register():
             registered_users[new_username] = new_password
             st.success("Usuario registrado exitosamente. Por favor, inicia sesión.")
 
-# Página principal
-def main():
-    st.write("Bienvenidos a mi app")
-    if not login():
-        register()
 
-if __name__ == "__main__":
-    main()
