@@ -21,15 +21,18 @@ Guarda tus recetas favoritas para acceder a ellas fácilmente más tarde.
 
 Comparte tus descubrimientos culinarios con amigos y familiares en las redes sociales. ''')
 
-# Página principal
+# Menú desplegable para elegir entre iniciar sesión y registrar usuario
+opcion = st.selectbox("Seleccione una opción:", ["Iniciar sesión", "Registrar usuario"])
+
+# Función principal
 def main():
-    if not login.login_user():
+    if opcion == "Iniciar sesión":
+        if not login.login_user():
+            st.info("Por favor, inicie sesión.")
+    elif opcion == "Registrar usuario":
         register.register_user()
     else:
-        # Limpiar la página
-        st.empty()
-        # Mostrar la página secundaria
-        mostrar_pagina_secundaria()
+        st.error("Opción no válida")
 
     if st.button("Ver lista de usuarios"):
         register.show_registered_users()
