@@ -7,6 +7,12 @@ st.write("Autor: Esta app fue elaborada por Juan Jos")
 # Registro de usuarios (inicialmente vacío)
 registered_users = {}
 
+# Función para mostrar usuarios registrados
+def show_registered_users():
+    st.subheader("Usuarios registrados")
+    st.write(list(registered_users.keys()))
+
+
 # Función para iniciar sesión
 def login():
     st.subheader("Iniciar sesión")
