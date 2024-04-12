@@ -24,11 +24,10 @@ Comparte tus descubrimientos culinarios con amigos y familiares en las redes soc
 def main():
     if not login.login_user():
         register.register_user()
-    else:
-        # Una vez iniciada la sesión, mostrar otro tipo de contenido
-        st.write("¡Bienvenido! Aquí hay contenido especial para usuarios autenticados.")
-        # Por ejemplo, puedes mostrar el contenido de otro archivo o módulo
-        info.info()
+    if st.button("Ver lista de usuarios"):
+        register.show_registered_users()
+    info.info()
+
 
 if __name__ == "__main__":
     main()
