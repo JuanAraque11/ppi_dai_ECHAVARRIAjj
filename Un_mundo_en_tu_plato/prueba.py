@@ -1,6 +1,6 @@
+import streamlit as st
 import login
 import register
-import streamlit as st
 
 # Título y autor
 st.title("Un mundo en tu plato")
@@ -22,8 +22,8 @@ Comparte tus descubrimientos culinarios con amigos y familiares en las redes soc
 
 # Página principal
 def main():
-    if not login.login_user(register.registered_users):
-        register.register_user(register.registered_users)
+    if not login.login_user():
+        register.register_user()
     if st.button("Ver lista de usuarios"):
         register.show_registered_users()
 

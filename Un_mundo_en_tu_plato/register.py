@@ -3,7 +3,7 @@ import streamlit as st
 registered_users = {}
 
 
-def register_user(registered_users):
+def register_user():
     st.subheader("Registro de usuario")
     new_username = st.text_input("Nuevo usuario")
     new_password = st.text_input("Nueva contraseña", type="password")
@@ -17,4 +17,4 @@ def register_user(registered_users):
 # Función para mostrar usuarios registrados
 def show_registered_users():
     st.subheader("Usuarios registrados")
-    st.write(list(st.session_state.registered_users.keys()))
+    st.write(list(registered_users.keys()))

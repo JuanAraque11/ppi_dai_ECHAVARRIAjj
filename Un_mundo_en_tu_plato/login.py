@@ -1,6 +1,7 @@
 import streamlit as st
+from register import registered_users
 
-def login_user(registered_users):
+def login_user():
     st.subheader("Iniciar sesión")
     username = st.text_input("Usuario")
     password = st.text_input("Contraseña", type="password")
