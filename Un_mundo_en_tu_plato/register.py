@@ -1,5 +1,7 @@
 import streamlit as st
 
+registered_users = {}
+
 
 def register_user(registered_users):
     st.subheader("Registro de usuario")

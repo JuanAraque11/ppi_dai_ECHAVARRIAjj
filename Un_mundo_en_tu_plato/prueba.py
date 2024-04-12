@@ -1,5 +1,5 @@
-from login import login_user
-from register import register_user
+import login
+import register
 import streamlit as st
 
 # Título y autor
@@ -25,15 +25,10 @@ def show_registered_users():
     st.write(list(st.session_state.registered_users.keys()))
 
 
-# Inicializamos la sesión para mantener los datos de usuario entre sesiones
-if 'registered_users' not in st.session_state:
-    st.session_state.registered_users = {}
-
-    
 # Página principal
 def main():
-    if not login_user(register.registered_users):
-        register_user(registered_users)
+    if not login.login_user(register.registered_users):
+        register.register_user(register.registered_users)
     if st.button("Ver lista de usuarios"):
         show_registered_users()
 
