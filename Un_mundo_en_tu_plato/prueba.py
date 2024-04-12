@@ -4,8 +4,8 @@ import streamlit as st
 st.title("Un mundo en tu plato")
 st.write("Autor: Esta app fue elaborada por Juan José")
 
-# Registro de usuarios
-registered_users = {"usuario1": "contraseña1", "usuario2": "contraseña2"}  # Datos de ejemplo
+# Registro de usuarios (inicialmente vacío)
+registered_users = {}
 
 # Función para iniciar sesión
 def login():
