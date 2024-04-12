@@ -19,18 +19,13 @@ Guarda tus recetas favoritas para acceder a ellas fácilmente más tarde.
 
 Comparte tus descubrimientos culinarios con amigos y familiares en las redes sociales. ''')
 
-# Función para mostrar usuarios registrados
-def show_registered_users():
-    st.subheader("Usuarios registrados")
-    st.write(list(st.session_state.registered_users.keys()))
-
 
 # Página principal
 def main():
     if not login.login_user(register.registered_users):
         register.register_user(register.registered_users)
     if st.button("Ver lista de usuarios"):
-        show_registered_users()
+        register.show_registered_users()
 
 if __name__ == "__main__":
     main()

@@ -13,3 +13,8 @@ def register_user(registered_users):
         else:
             registered_users[new_username] = new_password
             st.success("Usuario registrado exitosamente. Por favor, inicia sesión.")
+
+# Función para mostrar usuarios registrados
+def show_registered_users():
+    st.subheader("Usuarios registrados")
+    st.write(list(st.session_state.registered_users.keys()))
