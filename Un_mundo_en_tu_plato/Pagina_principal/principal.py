@@ -30,8 +30,9 @@ def main():
         if not login.login_user():
             st.info("Por favor, inicie sesión.")
         else:
+            st.empty()
             # Redirigir al usuario a un enlace externo después de iniciar sesión
-            st.markdown("[Ir al enlace](https://www.youtube.com/watch?v=FusIKjztap8&ab_channel=TheBeatlesVEVO)")
+            # st.markdown("[Ir al enlace](https://www.youtube.com/watch?v=FusIKjztap8&ab_channel=TheBeatlesVEVO)")
     elif opcion == "Registrar usuario":
         register.register_user()
     else:
