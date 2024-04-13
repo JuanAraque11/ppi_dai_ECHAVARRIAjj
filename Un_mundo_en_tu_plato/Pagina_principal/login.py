@@ -1,4 +1,5 @@
 import streamlit as st
+from clear import clear_page
 from register import registered_users
 
 def login_user():
@@ -9,7 +10,7 @@ def login_user():
         if username in registered_users:
             if registered_users[username] == password:
                 st.success("Inicio de sesión exitoso. ¡Bienvenido, {}!".format(username))      
-                st.experimental_rerun()
+                clear_page()
                 return True
             else:
                 st.error("Contraseña incorrecta")

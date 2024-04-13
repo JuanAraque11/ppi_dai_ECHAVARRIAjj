@@ -1,7 +1,6 @@
 import streamlit as st
 import info
 import login
-from inicio_sesion import mostrar_pagina_secundaria
 import register
 
 # Título y autor
