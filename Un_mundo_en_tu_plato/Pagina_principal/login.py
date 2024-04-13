@@ -8,7 +8,8 @@ def login_user():
     if st.button("Iniciar sesión"):
         if username in registered_users:
             if registered_users[username] == password:
-                st.success("Inicio de sesión exitoso. ¡Bienvenido, {}!".format(username))
+                st.success("Inicio de sesión exitoso. ¡Bienvenido, {}!".format(username))      
+                st.empty()
                 return True
             else:
                 st.error("Contraseña incorrecta")
