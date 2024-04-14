@@ -49,13 +49,17 @@ def crear_recetas():
     # Devolvemos las recetas creadas como un arreglo de NumPy
     return recetas
 
-# Función para imprimir las recetas creadas
+# Función para imprimir las recetas encontradas
 def imprimir_recetas(recetas):
-    print("Recetas creadas:")
-    for i, receta in enumerate(recetas, start=1):
-        print(f"Receta {i}: {receta.get_nombre()} ({receta.get_pais()})")
-        print("Ingredientes:", ", ".join(receta.get_ingredientes()))
-        print("Pasos:")
-        for j, paso in enumerate(receta.get_pasos(), start=1):
-            print(f"  {j}. {paso}")
-        print()
+    if not recetas:
+        print("No se encontraron recetas para el término de búsqueda.")
+    else:
+        print("Recetas encontradas:")
+        for i, receta in enumerate(recetas, start=1):
+            print(f"Receta {i}: {receta[0]} ({receta[1]})")
+            print("Ingredientes:", receta[2])
+            print("Pasos:")
+            pasos = receta[3].split("\n")
+            for j, paso in enumerate(pasos, start=1):
+                print(f"  {j}. {paso}")
+            print()
