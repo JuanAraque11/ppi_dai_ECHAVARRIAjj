@@ -19,14 +19,14 @@ def info1():
     
     if st.session_state.show_contact_info:
         st.write("Puedes contactar conmigo por medio de: ")
-        st.markdown("- [Contacto](https://www.linkedin.com/in/juan-jose-echavarria-araque-a92286296)")
-        st.markdown("- [Gmail](mailto:jechavarriaa@unal.edu.co")
+        st.markdown("- [LinkedIn](https://www.linkedin.com/in/juan-jose-echavarria-araque-a92286296)")
+        st.markdown("- [Reddit](https://www.reddit.com/user/JuanAraque/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)")
         st.write()
         st.write("O puedes contractar mis servicios por medio de: ")
         st.markdown("- [Upwork](https://www.upwork.com/workwith/juanjosee)")
         st.markdown("- [Freelancer](https://www.freelancer.com/u/JuanJEchav?sb=t)")
         st.markdown("- [Freelancer](https://www.freelancer.com/u/JuanJEchav?sb=t)")
-        
+
     # Botón para mostrar/ocultar política de privacidad
     if "show_privacy_policy" not in st.session_state:
         st.session_state.show_privacy_policy = False  # Establecer el estado inicial del botón
