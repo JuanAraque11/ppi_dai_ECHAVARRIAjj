@@ -32,8 +32,8 @@ def main():
             st.markdown("[Ir al enlace](https://www.youtube.com/watch?v=FusIKjztap8&ab_channel=TheBeatlesVEVO)")
     elif opcion == "Registrar usuario":
         register.register_user()
-    else:
-        st.error("Opción no válida")
+    elif opcion == "Inicio":
+        info.info()
 
     if st.button("Ver lista de usuarios"):
         register.show_registered_users()
