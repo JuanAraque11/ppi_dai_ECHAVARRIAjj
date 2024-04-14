@@ -5,7 +5,7 @@ import recetas
 import register
 
 # Menú desplegable para elegir entre iniciar sesión y registrar usuario
-opcion = st.sidebar.selectbox("Menú:", ["Inicio", "Iniciar sesión", "Registrarse", "Buscar Recetas"])
+opcion = st.sidebar.selectbox("Menú:", ["Inicio", "Iniciar sesión", "Registrarse", "Buscar recetas"])
 
 # Función para buscar recetas por nombre y país
 def buscar_recetas(recetas, termino_busqueda):
