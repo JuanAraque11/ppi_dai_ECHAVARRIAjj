@@ -25,7 +25,7 @@ def info1():
         st.write("O puedes contractar mis servicios por medio de: ")
         st.markdown("- [Upwork](https://www.upwork.com/workwith/juanjosee)")
         st.markdown("- [Freelancer](https://www.freelancer.com/u/JuanJEchav?sb=t)")
-        st.markdown("- [Freelancer](https://www.freelancer.com/u/JuanJEchav?sb=t)")
+        st.markdown("- [Fiverr](https://www.fiverr.com/juanjechav?public_mode=true)")
 
     # Botón para mostrar/ocultar política de privacidad
     if "show_privacy_policy" not in st.session_state:
