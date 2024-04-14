@@ -1,4 +1,5 @@
 import numpy as np
+import streamlit as st
 
 class Receta:
     def __init__(self, nombre, pais, ingredientes, pasos):
@@ -52,14 +53,13 @@ def crear_recetas():
 # Función para imprimir las recetas encontradas
 def imprimir_recetas(recetas):
     if not recetas:
-        print("No se encontraron recetas para el término de búsqueda.")
+        st.write("No se encontraron recetas para el término de búsqueda.")
     else:
-        print("Recetas encontradasa:")
+        st.write("Recetas encontradas:")
         for i, receta in enumerate(recetas, start=1):
-            print(f"Receta {i}: {receta[0]} ({receta[1]})")
-            print("Ingredientes:", receta[2])
-            print("Pasos:")
-            pasos = receta[3].split("\n")
-            for j, paso in enumerate(pasos, start=1):
-                print(f"  {j}. {paso}")
-            print()
+            st.write(f"Receta {i}: {receta.nombre} ({receta.pais})")
+            st.write("Ingredientes:", ", ".join(receta.ingredientes))
+            st.write("Pasos:")
+            for j, paso in enumerate(receta.pasos, start=1):
+                st.write(f"  {j}. {paso}")
+            st.write()
