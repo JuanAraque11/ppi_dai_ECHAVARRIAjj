@@ -54,7 +54,7 @@ def imprimir_recetas(recetas):
     if not recetas:
         print("No se encontraron recetas para el término de búsqueda.")
     else:
-        print("Recetas encontradas:")
+        print("Recetas encontradasa:")
         for i, receta in enumerate(recetas, start=1):
             print(f"Receta {i}: {receta[0]} ({receta[1]})")
             print("Ingredientes:", receta[2])
