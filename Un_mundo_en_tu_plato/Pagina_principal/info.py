@@ -13,9 +13,14 @@ def info1():
     st.markdown("- [Contacto](https://www.linkedin.com/in/juan-jose-echavarria-araque-a92286296)")
 
     # Botón para mostrar/ocultar política de privacidad
+    if "show_privacy_policy" not in st.session_state:
+        st.session_state.show_privacy_policy = False  # Establecer el estado inicial del botón
+    
     if st.button("Política de Privacidad"):
+        st.session_state.show_privacy_policy = not st.session_state.show_privacy_policy  # Alternar el estado del botón
+    
+    if st.session_state.show_privacy_policy:
         st.write("Aquí puedes escribir tu política de privacidad.")
-        # Puedes agregar todo el texto que desees mostrar
     
     # Pie de página
     st.write("© 2024 Mi Empresa. Todos los derechos reservados.")
