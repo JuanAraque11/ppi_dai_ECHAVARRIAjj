@@ -17,7 +17,7 @@ def buscar_recetas(recetas, termino_busqueda):
 def main():
 
     # Creación
-    recetas = recetas.crear_recetas()
+    comida = recetas.crear_recetas()
 
     if opcion == "Iniciar sesión":
         if not login.login_user():
@@ -33,7 +33,7 @@ def main():
         info.info2()
     elif opcion == "Buscar Recetas":
         termino_busqueda = st.sidebar.text_input("Buscar recetas por nombre o país:")
-        recetas_filtradas = buscar_recetas(recetas, termino_busqueda)
+        recetas_filtradas = buscar_recetas(comida, termino_busqueda)
         if recetas_filtradas:
             st.subheader("Recetas encontradas:")
             recetas.imprimir_recetas(recetas_filtradas)
