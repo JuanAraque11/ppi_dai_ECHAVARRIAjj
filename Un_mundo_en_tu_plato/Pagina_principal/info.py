@@ -5,13 +5,18 @@ def info1():
     st.title("Información Importante")
 
     # Texto descriptivo
-    st.write("¡Bienvenidos a nuestra página web! Aquí encontrarás información relevante sobre nuestro servicio.")
+    st.write("Bienvenido a mi página web, Aquí encontrarás información relevante sobre mi servicio.")
 
     # Enlaces a secciones específicas
     st.write("Para obtener más detalles, visita las siguientes secciones:")
     st.markdown("- [Política de Privacidad](https://tuempresa.com/politica-de-privacidad)")
     st.markdown("- [Contacto](https://www.linkedin.com/in/juan-jose-echavarria-araque-a92286296)")
 
+    # Botón para mostrar/ocultar política de privacidad
+    if st.button("Política de Privacidad"):
+        st.write("Aquí puedes escribir tu política de privacidad.")
+        # Puedes agregar todo el texto que desees mostrar
+    
     # Pie de página
     st.write("© 2024 Mi Empresa. Todos los derechos reservados.")
 
