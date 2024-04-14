@@ -36,12 +36,22 @@ class Receta:
 
 # Función para crear recetas
 def crear_recetas():
-    # Creamos tres instancias de la clase Receta
-    receta1 = Receta("Tacos al pastor", "México", ["Carne de cerdo", "Piña", "Cebolla", "Cilantro", "Tortillas de maíz"], ["Marinar la carne", "Asar la carne en trompo", "Servir en tortillas con piña y cebolla"])
-    receta2 = Receta("Pizza Margarita", "Italia", ["Masa de pizza", "Tomate", "Mozzarella", "Albahaca"], ["Extender la masa de pizza", "Agregar salsa de tomate y mozzarella", "Hornear y agregar albahaca fresca"])
-    receta3 = Receta("Pad Thai", "Tailandia", ["Fideos de arroz", "Tofu", "Huevo", "Brotes de soja", "Cacahuetes", "Salsa de tamarindo"], ["Saltear tofu y huevo", "Agregar fideos y salsa de tamarindo", "Incorporar brotes de soja y cacahuetes"])
+    almacen_recetas = []
 
-    return [receta1, receta2, receta3]
+    def agregar_receta(nombre, pais, ingredientes, pasos):
+        receta = Receta(nombre, pais, ingredientes, pasos)
+        almacen_recetas.append(receta)
+
+    agregar_receta("Tacos al pastor", "México", ["Carne de cerdo", "Piña", "Cebolla", "Cilantro", "Tortillas de maíz"], ["Marinar la carne", "Asar la carne en trompo", "Servir en tortillas con piña y cebolla"])
+    agregar_receta("Pizza Margarita", "Italia", ["Masa de pizza", "Tomate", "Mozzarella", "Albahaca"], ["Extender la masa de pizza", "Agregar salsa de tomate y mozzarella", "Hornear y agregar albahaca fresca"])
+    agregar_receta("Pad Thai", "Tailandia", ["Fideos de arroz", "Tofu", "Huevo", "Brotes de soja", "Cacahuetes", "Salsa de tamarindo"], ["Saltear tofu y huevo", "Agregar fideos y salsa de tamarindo", "Incorporar brotes de soja y cacahuetes"])
+    agregar_receta("Pasta Carbonara", "Italia", ["Espaguetis", "Bacon", "Huevo", "Queso Parmesano", "Pimienta negra"], ["Cocinar la pasta al dente", "Freír el bacon", "Mezclar los huevos con el queso", "Agregar la mezcla de huevo y queso a la pasta", "Añadir el bacon y la pimienta"])
+    agregar_receta("Risotto de Champiñones", "Italia", ["Arroz Arborio", "Champiñones", "Cebolla", "Caldo de pollo", "Vino blanco", "Queso Parmesano"], ["Sofreír la cebolla y los champiñones", "Añadir el arroz y el vino blanco", "Cocinar añadiendo caldo de pollo poco a poco", "Agregar queso parmesano al final"])
+    agregar_receta("Pesto Genovese", "Italia", ["Albahaca", "Piñones", "Ajo", "Queso Parmesano", "Aceite de oliva", "Sal", "Pimienta"], ["Triturar la albahaca, los piñones y el ajo", "Agregar el queso parmesano", "Añadir aceite de oliva hasta obtener la consistencia deseada", "Sazonar con sal y pimienta"])
+    agregar_receta("Tiramisú", "Italia", ["Café", "Licor de café", "Huevos", "Azúcar", "Mascarpone", "Bizcochos de soletilla", "Cacao en polvo"], ["Mojar los bizcochos en café y licor", "Hacer una crema con los huevos, el azúcar y el mascarpone", "Montar el postre alternando capas de bizcocho y crema", "Refrigerar y espolvorear con cacao en polvo antes de servir"])
+    agregar_receta("Pizza Margarita", "Italia", ["Masa de pizza", "Tomate", "Mozzarella", "Albahaca"], ["Extender la masa de pizza", "Agregar salsa de tomate y mozzarella", "Hornear y agregar albahaca fresca"])
+
+    return almacen_recetas
     # Convertir las recetas a un arreglo de NumPy
    
 ''' recetas = np.empty((3, 4), dtype=object)
