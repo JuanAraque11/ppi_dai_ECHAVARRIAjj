@@ -42,7 +42,7 @@ def main():
         termino_busqueda = st.sidebar.text_input("Buscar recetas por nombre o país:")
         recetas_filtradas = buscar_recetas(comidas, termino_busqueda)
         if recetas_filtradas:
-            st.subheader("Recetas (Los países disponibles por el momento son Colombia, Italia, México y Tailandia) :")
+            st.subheader("Recetas (Los países disponibles por el momento son Colombia, Italia, México y Tailandia)")
             if termino_busqueda:
                 recetas.imprimir_recetas(recetas_filtradas)
             else:
