@@ -11,7 +11,12 @@ opcion = st.sidebar.selectbox("Menú:", ["Inicio", "Iniciar sesión", "Registrar
 def buscar_recetas(recetas, termino_busqueda):
     recetas_encontradas = []
     for receta in recetas:
-        if termino_busqueda.lower() in receta[0].lower() or termino_busqueda.lower() in receta[1].lower():
+        # Convertimos los atributos de la receta a minúsculas para una búsqueda insensible a mayúsculas y minúsculas
+        nombre = receta.nombre.lower()
+        pais = receta.pais.lower()
+        # Verificamos si el término de búsqueda está en el nombre o país de la receta
+        if termino_busqueda.lower() in nombre or termino_busqueda.lower() in pais:
+            # Si encontramos una coincidencia, agregamos la receta a la lista de recetas encontradas
             recetas_encontradas.append(receta)
     return recetas_encontradas
 
