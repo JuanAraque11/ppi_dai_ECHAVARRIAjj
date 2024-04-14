@@ -15,6 +15,10 @@ def buscar_recetas(recetas, termino_busqueda):
 
 # Función principal
 def main():
+
+    # Creación
+    recetas = recetas.crear_recetas()
+
     if opcion == "Iniciar sesión":
         if not login.login_user():
             st.info("Por favor, inicie sesión.")
@@ -41,4 +45,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    recetas = recetas.crear_recetas()
