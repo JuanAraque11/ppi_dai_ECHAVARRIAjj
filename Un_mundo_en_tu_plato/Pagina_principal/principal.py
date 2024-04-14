@@ -21,8 +21,7 @@ Guarda tus recetas favoritas para acceder a ellas fácilmente más tarde.
 Comparte tus descubrimientos culinarios con amigos y familiares en las redes sociales. ''')
 
 # Menú desplegable para elegir entre iniciar sesión y registrar usuario
-opcion = st.selectbox("Seleccione una opción:", ["Iniciar sesión", "Registrar usuario"])
-
+opcion = st.sidebar.selectbox("Menú:", ["Inicio", "Iniciar sesión", "Registrarse"])
 # Función principal
 def main():
     if opcion == "Iniciar sesión":
