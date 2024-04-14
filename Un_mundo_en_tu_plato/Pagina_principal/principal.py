@@ -33,7 +33,7 @@ def main():
     elif opcion == "Registrar usuario":
         register.register_user()
     elif opcion == "Inicio":
-        info.info()
+        pass
 
     if st.button("Ver lista de usuarios"):
         register.show_registered_users()
