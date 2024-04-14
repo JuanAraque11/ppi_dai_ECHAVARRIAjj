@@ -57,9 +57,9 @@ def imprimir_recetas(recetas):
     else:
         st.write("Recetas encontradas:")
         for i, receta in enumerate(recetas, start=1):
-            st.write(f"Receta {i}: {receta.get_nombre()} ({receta.get_pais()})")
-            st.write("Ingredientes:", ", ".join(receta.get_ingredientes()))
+            st.write(f"Receta {i}: {receta.nombre} ({receta.pais})")
+            st.write("Ingredientes:", ", ".join(receta.ingredientes))
             st.write("Pasos:")
-            for j, paso in enumerate(receta.get_pasos(), start=1):
+            for j, paso in enumerate(receta.pasos, start=1):
                 st.write(f"  {j}. {paso}")
             st.write()
