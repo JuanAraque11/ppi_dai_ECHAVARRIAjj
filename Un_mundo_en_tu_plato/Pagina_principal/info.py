@@ -21,8 +21,7 @@ def info1():
     
     if st.session_state.show_privacy_policy:
         st.write('''
-        Política de tratamiento de datos personales para los usuarios de Un mundo en tu plato
-    Introducción
+        Política de tratamiento de datos personales para los usuarios de Un mundo en tu plato.
 
     Un mundo en tu plato es una aplicación web que permite a los usuarios explorar y descubrir recetas auténticas de diferentes partes del mundo. La Aplicación está comprometida con la protección de la privacidad de sus usuarios y el tratamiento responsable de sus datos personales.
 
