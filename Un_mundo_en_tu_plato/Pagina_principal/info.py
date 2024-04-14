@@ -9,9 +9,24 @@ def info1():
 
     # Enlaces a secciones específicas
     st.write("Para obtener más detalles, visita las siguientes secciones:")
-    st.markdown("- [Política de Privacidad](https://tuempresa.com/politica-de-privacidad)")
-    st.markdown("- [Contacto](https://www.linkedin.com/in/juan-jose-echavarria-araque-a92286296)")
 
+    # Botón para mostrar/ocultar información de contacto
+    if "show_contact_info" not in st.session_state:
+        st.session_state.show_contact_info = False  # Establecer el estado inicial del botón
+    
+    if st.button("Contacto"):
+        st.session_state.show_contact_info = not st.session_state.show_contact_info  # Alternar el estado del botón
+    
+    if st.session_state.show_contact_info:
+        st.write("Puedes contactar conmigo por medio de: ")
+        st.markdown("- [Contacto](https://www.linkedin.com/in/juan-jose-echavarria-araque-a92286296)")
+        st.markdown("- [Gmail](mailto:jechavarriaa@unal.edu.co")
+        st.write()
+        st.write("O puedes contractar mis servicios por medio de: ")
+        st.markdown("- [Upwork](https://www.upwork.com/workwith/juanjosee)")
+        st.markdown("- [Freelancer](https://www.freelancer.com/u/JuanJEchav?sb=t)")
+        st.markdown("- [Freelancer](https://www.freelancer.com/u/JuanJEchav?sb=t)")
+        
     # Botón para mostrar/ocultar política de privacidad
     if "show_privacy_policy" not in st.session_state:
         st.session_state.show_privacy_policy = False  # Establecer el estado inicial del botón
@@ -23,41 +38,41 @@ def info1():
         st.write('''
         Política de tratamiento de datos personales para los usuarios de Un mundo en tu plato.
 
-    Un mundo en tu plato es una aplicación web que permite a los usuarios explorar y descubrir recetas auténticas de diferentes partes del mundo. La Aplicación está comprometida con la protección de la privacidad de sus usuarios y el tratamiento responsable de sus datos personales.
+        Un mundo en tu plato es una aplicación web que permite a los usuarios explorar y descubrir recetas auténticas de diferentes partes del mundo. La Aplicación está comprometida con la protección de la privacidad de sus usuarios y el tratamiento responsable de sus datos personales.
 
-    Esta Política de tratamiento de datos personales describe cómo la Aplicación recopila, utiliza, divulga y protege los datos personales de sus usuarios. Esta Política se aplica a toda la información que la Aplicación recopila a través de la Aplicación, el sitio web de la Aplicación y cualquier otro servicio relacionado con la Aplicación.
+        Esta Política de tratamiento de datos personales describe cómo la Aplicación recopila, utiliza, divulga y protege los datos personales de sus usuarios. Esta Política se aplica a toda la información que la Aplicación recopila a través de la Aplicación, el sitio web de la Aplicación y cualquier otro servicio relacionado con la Aplicación.
 
-    1. Recopilación de datos personales
+        1. Recopilación de datos personales
 
-    La Aplicación recopila los siguientes datos personales de sus usuarios:
+        La Aplicación recopila los siguientes datos personales de sus usuarios:
 
-    Información de registro: Cuando un usuario crea una cuenta en la Aplicación, se le solicita que proporcione cierta información, como su usuario y contraseña.
-    Datos de actividad: La Aplicación recopila datos sobre la actividad del usuario en la Aplicación, como las recetas que el usuario ha guardado.
-                 
-    2. Uso de datos personales
+        Información de registro: Cuando un usuario crea una cuenta en la Aplicación, se le solicita que proporcione cierta información, como su usuario y contraseña.
+        Datos de actividad: La Aplicación recopila datos sobre la actividad del usuario en la Aplicación, como las recetas que el usuario ha guardado.
+                    
+        2. Uso de datos personales
 
-    La Aplicación utiliza los datos personales de sus usuarios para los siguientes fines:
+        La Aplicación utiliza los datos personales de sus usuarios para los siguientes fines:
 
-    Proporcionar y mejorar la Aplicación: La Aplicación utiliza los datos personales de sus usuarios para proporcionarles la Aplicación y mejorar su experiencia.
-    Personalizar la experiencia del usuario: La Aplicación utiliza los datos personales de sus usuarios para personalizar su experiencia.
-    Investigación y desarrollo: La Aplicación puede utilizar los datos personales de sus usuarios para investigación y desarrollo.
-    
-    3. Divulgación de datos personales
+        Proporcionar y mejorar la Aplicación: La Aplicación utiliza los datos personales de sus usuarios para proporcionarles la Aplicación y mejorar su experiencia.
+        Personalizar la experiencia del usuario: La Aplicación utiliza los datos personales de sus usuarios para personalizar su experiencia.
+        Investigación y desarrollo: La Aplicación puede utilizar los datos personales de sus usuarios para investigación y desarrollo.
+        
+        3. Divulgación de datos personales
 
-    La Aplicación no divulgará los datos personales de sus usuarios a terceros sin el consentimiento previo del usuario. Sin embargo, la Aplicación puede divulgar los datos personales de sus usuarios a terceros proveedores de servicios que ayudan a la Aplicación a operar, como proveedores de alojamiento web y proveedores de análisis.
+        La Aplicación no divulgará los datos personales de sus usuarios a terceros sin el consentimiento previo del usuario. Sin embargo, la Aplicación puede divulgar los datos personales de sus usuarios a terceros proveedores de servicios que ayudan a la Aplicación a operar, como proveedores de alojamiento web y proveedores de análisis.
 
-    4. Seguridad de los datos personales
+        4. Seguridad de los datos personales
 
-    La Aplicación toma medidas razonables para proteger los datos personales de sus usuarios contra la pérdida, el robo, el uso no autorizado, la divulgación y la alteración. Estas medidas incluyen medidas de seguridad físicas, técnicas y administrativas.
+        La Aplicación toma medidas razonables para proteger los datos personales de sus usuarios contra la pérdida, el robo, el uso no autorizado, la divulgación y la alteración. Estas medidas incluyen medidas de seguridad físicas, técnicas y administrativas.
 
-    5. Derechos de los usuarios
+        5. Derechos de los usuarios
 
-    Los usuarios tienen los siguientes derechos con respecto a sus datos personales:
+        Los usuarios tienen los siguientes derechos con respecto a sus datos personales:
 
-    Derecho de acceso: Los usuarios tienen derecho a acceder a sus datos personales y a obtener información sobre cómo se están utilizando sus datos.
-    Derecho de cambio: Los usuarios tienen derecho a solicitar la cambio de sus datos personales si son incorrectos o están incompletos o por deseo personal.
-    Derecho de supresión: Los usuarios tienen derecho a solicitar la supresión de sus datos personales en determinados casos.
-    Derecho de limitación del tratamiento: Los usuarios tienen derecho a solicitar la limitación del tratamiento de sus datos personales en determinados casos.
+        Derecho de acceso: Los usuarios tienen derecho a acceder a sus datos personales y a obtener información sobre cómo se están utilizando sus datos.
+        Derecho de cambio: Los usuarios tienen derecho a solicitar la cambio de sus datos personales si son incorrectos o están incompletos o por deseo personal.
+        Derecho de supresión: Los usuarios tienen derecho a solicitar la supresión de sus datos personales en determinados casos.
+        Derecho de limitación del tratamiento: Los usuarios tienen derecho a solicitar la limitación del tratamiento de sus datos personales en determinados casos.
         ''')
     
     # Pie de página
