@@ -1,3 +1,5 @@
+import numpy as np
+
 class Receta:
     def __init__(self, nombre, pais, ingredientes, pasos):
         self.nombre = nombre
@@ -38,8 +40,14 @@ def crear_recetas():
     receta2 = Receta("Pizza Margarita", "Italia", ["Masa de pizza", "Tomate", "Mozzarella", "Albahaca"], ["Extender la masa de pizza", "Agregar salsa de tomate y mozzarella", "Hornear y agregar albahaca fresca"])
     receta3 = Receta("Pad Thai", "Tailandia", ["Fideos de arroz", "Tofu", "Huevo", "Brotes de soja", "Cacahuetes", "Salsa de tamarindo"], ["Saltear tofu y huevo", "Agregar fideos y salsa de tamarindo", "Incorporar brotes de soja y cacahuetes"])
 
-    # Devolvemos las recetas creadas
-    return [receta1, receta2, receta3]
+    # Convertir las recetas a un arreglo de NumPy
+    recetas = np.empty((3, 4), dtype=object)
+    recetas[0, :] = [receta1.nombre, receta1.pais, ", ".join(receta1.ingredientes), "\n".join(receta1.pasos)]
+    recetas[1, :] = [receta2.nombre, receta2.pais, ", ".join(receta2.ingredientes), "\n".join(receta2.pasos)]
+    recetas[2, :] = [receta3.nombre, receta3.pais, ", ".join(receta3.ingredientes), "\n".join(receta3.pasos)]
+
+    # Devolvemos las recetas creadas como un arreglo de NumPy
+    return recetas
 
 # Función para imprimir las recetas creadas
 def imprimir_recetas(recetas):

@@ -9,15 +9,17 @@ opcion = st.sidebar.selectbox("Menú:", ["Inicio", "Iniciar sesión", "Registrar
 
 # Función para buscar recetas por nombre y país
 def buscar_recetas(recetas, termino_busqueda):
-    # Filtrar recetas por nombre o país
-    recetas_filtradas = [receta for receta in recetas if termino_busqueda.lower() in receta.get_nombre().lower() or termino_busqueda.lower() in receta.get_pais().lower()]
-    return recetas_filtradas
+    recetas_encontradas = []
+    for receta in recetas:
+        if termino_busqueda.lower() in receta[0].lower() or termino_busqueda.lower() in receta[1].lower():
+            recetas_encontradas.append(receta)
+    return recetas_encontradas
 
 # Función principal
 def main():
 
     # Creación
-    comida = recetas.crear_recetas()
+    comidas = recetas.crear_recetas()
 
     if opcion == "Iniciar sesión":
         if not login.login_user():
@@ -33,7 +35,7 @@ def main():
         info.info2()
     elif opcion == "Buscar Recetas":
         termino_busqueda = st.sidebar.text_input("Buscar recetas por nombre o país:")
-        recetas_filtradas = buscar_recetas(comida, termino_busqueda)
+        recetas_filtradas = buscar_recetas(comidas, termino_busqueda)
         if recetas_filtradas:
             st.subheader("Recetas encontradas:")
             recetas.imprimir_recetas(recetas_filtradas)
