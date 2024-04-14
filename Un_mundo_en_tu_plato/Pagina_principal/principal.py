@@ -38,7 +38,7 @@ def main():
             register.show_registered_users()
     elif opcion == "Inicio":
         info.info2()
-    elif opcion == "Buscar Recetas":
+    elif opcion == "Buscar recetas":
         termino_busqueda = st.sidebar.text_input("Buscar recetas por nombre o país:")
         recetas_filtradas = buscar_recetas(comidas, termino_busqueda)
         if recetas_filtradas:
