@@ -23,7 +23,7 @@ def mostrar_inicio():
     # Mostrar gráfico en Streamlit
     st.pyplot() """
 
-def visualizar_distribucion_recetas(recetas):
+"""def visualizar_distribucion_recetas(recetas):
     # Cargar datos geoespaciales de los países
     world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
 
@@ -45,7 +45,7 @@ def visualizar_distribucion_recetas(recetas):
     ax.set_axis_off()
 
     # Mostrar el mapa en Streamlit
-    st.pyplot(fig)
+    st.pyplot(fig) """
 
 # Ejemplo de uso:
 recetas = {
