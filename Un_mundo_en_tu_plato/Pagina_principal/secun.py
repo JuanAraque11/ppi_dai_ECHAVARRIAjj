@@ -2,16 +2,17 @@ import streamlit as st
 import funciones
 import pandas as pd
 #import scipy.stats as stats
+import matplotlib.pyplot as plt
+
 
 # Título de la página
 st.title("Contenido")
 
 # Menú de opciones desplegables
-opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga tus recetas"])
+opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga tus recetas", "Popularidad"])
 
 # Mostrar contenido según la opción seleccionada
 if opcion == "Información":
-    st.write("Este es el contenido de la Opción 1.")
     funciones.mostrar_inicio()
 elif opcion == "Guardar Recetas":
     st.write("En proceso...")
@@ -64,3 +65,6 @@ elif opcion == "Carga tus recetas":
         # Mostrar los datos cargados
         st.write("Datos adicionales cargados:")
         st.write(df_datos_adicionales)
+
+elif opcion == "Popularidad":
+    funciones.mostrar_grafico_popularidad(funciones.platos, funciones.popularidad)

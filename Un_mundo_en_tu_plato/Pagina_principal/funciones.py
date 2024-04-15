@@ -1,5 +1,7 @@
 import streamlit as st
 import numpy as np
+import matplotlib.pyplot as plt
+
 
 def mostrar_inicio():
     st.write("Bienvenido al Inicio")
@@ -8,7 +10,21 @@ def mostrar_inicio():
     st.write("- Consultar Información de los Platos: Proporciona información detallada sobre los platos disponibles.")
     st.write("- Ver Distribuciones Estadísticas: Muestra distribuciones estadísticas sobre los platos.")
 
+def mostrar_grafico_popularidad(platos, popularidad):
+    # Crear gráfico de barras
+    plt.bar(platos, popularidad)
+    plt.xlabel("Plato")
+    plt.ylabel("Popularidad")
+    plt.title("Popularidad de Platos")
+    plt.xticks(rotation=45)
+    plt.tight_layout()
 
+    # Mostrar gráfico en Streamlit
+    st.pyplot()
+
+# Ejemplo de uso:
+platos = ["Tacos al Pastor", "Pizza Margarita", "Pad Thai"]
+popularidad = [100, 75, 50]
 # Diccionario de recetas con ingredientes por porción
 recetas = {
     "Tacos al Pastor": {"Carne de cerdo": 100, "Piña": 50, "Cebolla": 30, "Cilantro": 10, "Tortillas de maíz": 2},
