@@ -3,6 +3,7 @@ import info
 import login
 import recetas
 import register
+from usuario import Usuario
 
 # Menú desplegable para elegir entre iniciar sesión y registrar usuario
 opcion = st.sidebar.selectbox("Menú:", ["Inicio", "Iniciar sesión", "Registrarse", "Buscar recetas"])
@@ -33,7 +34,7 @@ def main():
         else:
             # Redirigir al usuario a un enlace externo después de iniciar sesión
             st.markdown("[Ir al enlace](https://www.youtube.com/watch?v=FusIKjztap8&ab_channel=TheBeatlesVEVO)")
-            st.write("La sesion pertenece a ", en_sesion.username)
+            st.write("La sesion pertenece a ", en_sesion.get_username())
     elif opcion == "Registrarse":
         register.register_user()
         if st.button("Ver lista de usuarios"):
