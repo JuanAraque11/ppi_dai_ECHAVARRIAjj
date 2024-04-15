@@ -26,5 +26,13 @@ def change_password():
     nueva_contraseña = st.text_input("Nueva contraseña:", type="password")
 
     if st.button("Actualizar"):
+        if user in registered_users:
+            if registered_users[user] == contraseña_actual:
+                registered_users[user] = nueva_contraseña
+                st.success("¡Contraseña actualizada con éxito!")
+            else:
+                st.error("Contraseña incorrecta")
+        else:
+            st.error("Usuario no registrado")
         # Aquí puedes colocar el código para verificar la contraseña actual y actualizarla
-        st.success("¡Contraseña actualizada con éxito!")
+
