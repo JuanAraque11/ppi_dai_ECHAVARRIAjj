@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
-#import matplotlib.pyplot as plt
+# import geopandas as gpd
+# import matplotlib.pyplot as plt
 
 
 def mostrar_inicio():
@@ -22,6 +23,37 @@ def mostrar_inicio():
     # Mostrar gráfico en Streamlit
     st.pyplot() """
 
+def visualizar_distribucion_recetas(recetas):
+    # Cargar datos geoespaciales de los países
+    world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+
+    # Contar la cantidad de recetas por país
+    recetas_por_pais = {}
+    for receta, pais in recetas.items():
+        recetas_por_pais[pais] = recetas_por_pais.get(pais, 0) + 1
+
+    # Agregar los datos de recetas por país al dataframe de los países
+    world['recetas'] = world['name'].map(recetas_por_pais)
+
+    # Crear un mapa interactivo
+    st.title("Distribución Geográfica de Recetas")
+
+    # Mostrar el mapa interactivo
+    fig, ax = plt.subplots(figsize=(10, 6))
+    world.plot(column='recetas', cmap='YlGn', linewidth=0.8, ax=ax, edgecolor='0.8', legend=True)
+    ax.set_title('Distribución Geográfica de Recetas')
+    ax.set_axis_off()
+
+    # Mostrar el mapa en Streamlit
+    st.pyplot(fig)
+
+# Ejemplo de uso:
+recetas = {
+    "Tacos al Pastor": "México",
+    "Pizza Margarita": "Italia",
+    "Pad Thai": "Tailandia",
+    # Agregar más recetas con sus países de origen
+}
 # Ejemplo de uso:
 platos = ["Tacos al Pastor", "Pizza Margarita", "Pad Thai"]
 popularidad = [100, 75, 50]

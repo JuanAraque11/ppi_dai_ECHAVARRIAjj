@@ -9,7 +9,7 @@ import pandas as pd
 st.title("Contenido")
 
 # Menú de opciones desplegables
-opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga tus recetas", "Popularidad"])
+opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga tus recetas", "Popularidad", "Distribuciones"])
 
 # Mostrar contenido según la opción seleccionada
 if opcion == "Información":
@@ -69,3 +69,7 @@ elif opcion == "Carga tus recetas":
 elif opcion == "Popularidad":
     st.write("")
     #funciones.mostrar_grafico_popularidad(funciones.platos, funciones.popularidad)
+
+elif opcion == "Distribuciones":
+    st.write("")
+    # funciones.visualizar_distribucion_recetas(funciones.recetas)
