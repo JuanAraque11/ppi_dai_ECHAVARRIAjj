@@ -5,7 +5,7 @@ import streamlit as st
 st.title("Contenido")
 
 # Menú de opciones desplegables
-opcion = st.selectbox("Selecciona una opción:", ["Opción 1", "Opción 2", "Opción 3"])
+opcion = st.sidebar.selectbox("Selecciona una opción:", ["Opción 1", "Opción 2", "Opción 3"])
 
 # Mostrar contenido según la opción seleccionada
 if opcion == "Opción 1":
