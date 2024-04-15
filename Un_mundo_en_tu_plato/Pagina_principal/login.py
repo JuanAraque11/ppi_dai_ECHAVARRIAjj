@@ -1,6 +1,6 @@
 import streamlit as st
 from register import registered_users
-from Pagina_secundaria.usuario import Usuario
+from usuario import Usuario
 
 def login_user():
     st.subheader("Iniciar sesión")
