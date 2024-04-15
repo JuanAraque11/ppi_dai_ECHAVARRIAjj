@@ -125,7 +125,9 @@ def info1():
     # Pie de página
     st.write("© 2024 Mi Empresa. Todos los derechos reservados.")
 
+
 def info2():
+    
     # Título y autor
     st.title("Un mundo en tu plato")
     st.write('''¡Emprende un viaje culinario alrededor del mundo sin salir de\

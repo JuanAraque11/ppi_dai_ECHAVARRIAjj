@@ -66,12 +66,14 @@ recetas = {
     "Tacos al Pastor": "México",
     "Pizza Margarita": "Italia",
     "Pad Thai": "Tailandia",
+
     # Agregar más recetas con sus países de origen
 }
 
 # Ejemplo de uso:
 platos = ["Tacos al Pastor", "Pizza Margarita", "Pad Thai"]
 popularidad = [100, 75, 50]
+
 # Diccionario de recetas con ingredientes por porción
 recetas = {
     "Tacos al Pastor": {"Carne de cerdo": 100, "Piña": 50, "Cebolla": 30,

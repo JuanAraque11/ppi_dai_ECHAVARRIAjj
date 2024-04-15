@@ -25,6 +25,7 @@ def login_user():
             st.error("Usuario no registrado")
     return False, None
 
+
 def crear_usuario(userna, passwo):
     user = Usuario(userna, passwo)
     return user

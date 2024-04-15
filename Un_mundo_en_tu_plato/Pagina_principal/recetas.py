@@ -2,11 +2,39 @@ import numpy as np
 import streamlit as st
 
 class Receta:
+    """Representa una receta de cocina.
+
+    Esta clase almacena información sobre una receta, incluyendo su nombre,
+    país de origen, ingredientes y pasos para prepararla.
+
+    Args:
+        nombre (str): El nombre de la receta.
+        pais (str): El país de origen de la receta.
+        ingredientes (list): Una lista de ingredientes necesarios para la receta.
+        pasos (list): Una lista de pasos para preparar la receta.
+
+    Attributes:
+        nombre (str): El nombre de la receta.
+        pais (str): El país de origen de la receta.
+        ingredientes (list): Una lista de ingredientes necesarios para la receta.
+        pasos (list): Una lista de pasos para preparar la receta.
+
+    """
     def __init__(self, nombre, pais, ingredientes, pasos):
+        """Inicializa una nueva instancia de la clase Receta.
+
+        Args:
+            nombre (str): El nombre de la receta.
+            pais (str): El país de origen de la receta.
+            ingredientes (list): Una lista de ingredientes necesarios para la receta.
+            pasos (list): Una lista de pasos para preparar la receta.
+
+        """
         self.nombre = nombre
         self.pais = pais
         self.ingredientes = ingredientes
         self.pasos = pasos
+
 
     # Getters
     def get_nombre(self):
@@ -34,11 +62,26 @@ class Receta:
     def set_pasos(self, pasos):
         self.pasos = pasos
 
+
 # Función para crear recetas
 def crear_recetas():
+    """
+    Crea una lista de recetas.
+    
+    Args: None
+
+    Returns: list de recetas
+    """
     almacen_recetas = []
 
     def agregar_receta(nombre, pais, ingredientes, pasos):
+        """
+        Agrega una receta a la lista de recetas.
+
+        Args: str, str, list, list
+
+        Returns: None
+        """
         receta = Receta(nombre, pais, ingredientes, pasos)
         almacen_recetas.append(receta)
 
@@ -68,8 +111,16 @@ def crear_recetas():
 
     return almacen_recetas
 
+
 # Función para imprimir las recetas encontradas
 def imprimir_recetas(recetas):
+    """
+    imprime las recetas encontradas
+
+    Args:  recetas (list): lista de recetas
+
+    Returns: None
+    """
     if not recetas:
         st.write("No se encontraron recetas para el término de búsqueda.")
     else:

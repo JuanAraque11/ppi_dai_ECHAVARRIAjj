@@ -20,16 +20,20 @@ def buscar_recetas(recetas, termino_busqueda):
     """
     recetas_encontradas = []
     for receta in recetas:
+
         # Convertimos los atributos de la receta a minúsculas para una búsqueda
         # insensible a mayúsculas y minúsculas
         nombre = receta.nombre.lower()
         pais = receta.pais.lower()
+
         # Verificamos si el término de búsqueda está en el nombre o país de 
         # la receta
         if termino_busqueda.lower() in nombre or termino_busqueda.lower() in pais:
+            
             # Si encontramos una coincidencia, agregamos la receta a la lista
             recetas_encontradas.append(receta)
     return recetas_encontradas
+
 
 # Función principal
 def main():
@@ -49,6 +53,7 @@ def main():
         if not estado:
             st.info("Por favor, inicie sesión.")
         else:
+            
             # Redirigir al usuario a un enlace externo después de iniciar sesión
             st.markdown("[Ir al enlace](https://unmundoentuplato-funciones.streamlit.app/)")
             st.write("La sesion pertenece a ", en_sesion.get_username())
