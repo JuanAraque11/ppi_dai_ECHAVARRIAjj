@@ -16,7 +16,7 @@ def login_user():
                 st.error("Contraseña incorrecta")
         else:
             st.error("Usuario no registrado")
-    return False
+    return False, None
 
 def crear_usuario(userna, passwo):
     user = usuario.Usuario(userna, passwo)
