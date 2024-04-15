@@ -3,6 +3,13 @@ from register import registered_users
 from usuario import Usuario
 
 def login_user():
+    """
+    Iniciar sesión de usuario.
+
+    Args: None'
+
+    Returns:  True si el inicio de sesión fue exitoso, False en caso contrario.
+    """
     st.subheader("Iniciar sesión")
     username = st.text_input("Usuario")
     password = st.text_input("Contraseña", type="password")
