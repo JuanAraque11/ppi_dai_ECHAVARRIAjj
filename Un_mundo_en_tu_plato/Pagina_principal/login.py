@@ -1,6 +1,6 @@
 import streamlit as st
-from clear import clear_page
 from register import registered_users
+from Pagina_secundaria import usuario
 
 def login_user():
     st.subheader("Iniciar sesión")
@@ -9,11 +9,15 @@ def login_user():
     if st.button("Iniciar sesión"):
         if username in registered_users:
             if registered_users[username] == password:
-                st.success("Inicio de sesión exitoso. ¡Bienvenido, {}!".format(username))      
-                clear_page()
-                return True
+                st.success("Inicio de sesión exitoso. ¡Bienvenido, {}!".format(username))  
+                actual = crear_usuario(username, password)  
+                return True, actual
             else:
                 st.error("Contraseña incorrecta")
         else:
             st.error("Usuario no registrado")
     return False
+
+def crear_usuario(userna, passwo):
+    user = usuario.Usuario(userna, passwo)
+    return user

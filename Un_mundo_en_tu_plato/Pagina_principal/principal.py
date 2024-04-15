@@ -27,7 +27,7 @@ def main():
     comidas = recetas.crear_recetas()
 
     if opcion == "Iniciar sesión":
-        if not login.login_user():
+        if not login.login_user()[0]:
             st.info("Por favor, inicie sesión.")
         else:
             # Redirigir al usuario a un enlace externo después de iniciar sesión
