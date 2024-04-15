@@ -35,18 +35,13 @@ def info1():
                 proyectos desafiantes.
                 ''')
         st.write("Puedes contactar conmigo por medio de: ")
-        st.markdown("- [LinkedIn](https://www.linkedin.com/in/juan-\
-        jose-echavarria-araque-a92286296)")
-        st.markdown("- [Reddit](https://www.reddit.com/user/JuanAraque/?utm_\
-        source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=\
-        share_button)")
+        st.markdown("- [LinkedIn](https://www.linkedin.com/in/juan-jose-echavarria-araque-a92286296)")
+        st.markdown("- [Reddit](https://www.reddit.com/user/JuanAraque/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)")
         st.write()
         st.write("O puedes contratar mis servicios por medio de: ")
         st.markdown("- [Upwork](https://www.upwork.com/workwith/juanjosee)")
-        st.markdown("- [Freelancer](https://www.freelancer.com/u/JuanJEchav?\
-        sb=t)")
-        st.markdown("- [Fiverr](https://www.fiverr.com/juanjechav?public_mode=\
-        true)")
+        st.markdown("- [Freelancer](https://www.freelancer.com/u/JuanJEchav?sb=t)")
+        st.markdown("- [Fiverr](https://www.fiverr.com/juanjechav?public_mode=true)")
 
     # Botón para mostrar/ocultar política de privacidad
     if "show_privacy_policy" not in st.session_state:
