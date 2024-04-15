@@ -16,6 +16,14 @@ recetas = {
     "Pad Thai": {"Fideos de arroz": 100, "Tofu": 50, "Huevo": 30, "Brotes de soja": 20, "Cacahuetes": 10, "Salsa de tamarindo": 50}
 }
 
+# Datos de ejemplo de recetas
+datos_recetas = {
+    "Nombre": ["Tacos al Pastor", "Pizza Margarita", "Pad Thai"],
+    "Calorías": [300, 250, 400],
+    "Grasas (g)": [15, 10, 20],
+    "Proteínas (g)": [20, 15, 25]
+}
+
 def calcular_ingredientes(plato, num_personas):
     ingredientes = recetas.get(plato, {})
     cantidad_por_porcion = np.array(list(ingredientes.values()))

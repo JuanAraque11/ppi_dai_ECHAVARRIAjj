@@ -1,12 +1,13 @@
 import streamlit as st
 import funciones
 import pandas as pd
+import scipy.stats as stats
 
 # Título de la página
 st.title("Contenido")
 
 # Menú de opciones desplegables
-opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Distribuciones Estadísticas", "Carga tus recetas"])
+opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga tus recetas"])
 
 # Mostrar contenido según la opción seleccionada
 if opcion == "Información":
@@ -28,12 +29,29 @@ elif opcion == "Consultar Información de los Platos":
         st.write("Cantidad de Ingredientes Necesarios:")
         for ingrediente, cantidad in cantidad_ingredientes.items():
             st.write(f"- {ingrediente}: {cantidad} gramos")
-elif opcion == "Distribuciones Estadísticas":
+elif opcion == "Estadísticas de recetas":
     st.write("")
+    # Crear DataFrame de Pandas con los datos de las recetas
+    df_recetas = pd.DataFrame(funciones.datos_recetas)
+
+    # Calcular estadísticas descriptivas
+    descripcion_calorias = stats.describe(df_recetas["Calorías"])
+    descripcion_grasas = stats.describe(df_recetas["Grasas (g)"])
+    descripcion_proteinas = stats.describe(df_recetas["Proteínas (g)"])
+
+    # Mostrar estadísticas descriptivas
+    st.title("Análisis de Ingredientes Nutricionales")
+    st.write("Estadísticas de Calorías:")
+    st.write(descripcion_calorias)
+    st.write("Estadísticas de Grasas:")
+    st.write(descripcion_grasas)
+    st.write("Estadísticas de Proteínas:")
+    st.write(descripcion_proteinas)
+
 elif opcion == "Carga tus recetas":
     
     # Widget para cargar archivo CSV o Excel
-    archivo = st.file_uploader("Cargar archivo de datos adicionales:", type=["csv", "xlsx"])
+    archivo = st.file_uploader("Cargar archivo con tus recetas:", type=["csv", "xlsx"])
 
     # Si se carga un archivo, leer los datos y mostrarlos
     if archivo is not None:
