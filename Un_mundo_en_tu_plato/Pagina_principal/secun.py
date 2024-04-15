@@ -1,7 +1,7 @@
 import streamlit as st
 import funciones
 import pandas as pd
-import scipy.stats as stats
+#import scipy.stats as stats
 
 # Título de la página
 st.title("Contenido")
@@ -32,7 +32,7 @@ elif opcion == "Consultar Información de los Platos":
 elif opcion == "Estadísticas de recetas":
     st.write("")
     # Crear DataFrame de Pandas con los datos de las recetas
-    df_recetas = pd.DataFrame(funciones.datos_recetas)
+    """df_recetas = pd.DataFrame(funciones.datos_recetas)
 
     # Calcular estadísticas descriptivas
     descripcion_calorias = stats.describe(df_recetas["Calorías"])
@@ -46,7 +46,7 @@ elif opcion == "Estadísticas de recetas":
     st.write("Estadísticas de Grasas:")
     st.write(descripcion_grasas)
     st.write("Estadísticas de Proteínas:")
-    st.write(descripcion_proteinas)
+    st.write(descripcion_proteinas) """
 
 elif opcion == "Carga tus recetas":
     
