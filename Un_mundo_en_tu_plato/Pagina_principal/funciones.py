@@ -11,8 +11,7 @@ def mostrar_inicio():
     Args: None
 
     Returns: None
-
-    """"
+    """
     st.write("Bienvenido al Inicio")
     st.write("Aquí encontrarás información sobre las funciones de la página:")
     st.write("- Guardar Recetas: Permite a los usuarios guardar nuevas recetas\
