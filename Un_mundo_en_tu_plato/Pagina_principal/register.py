@@ -18,3 +18,13 @@ def register_user():
 def show_registered_users():
     st.subheader("Usuarios registrados")
     st.write(list(registered_users.keys()))
+
+
+def change_password():
+    user = st.text_input("Usuario:")
+    contraseña_actual = st.text_input("Contraseña actual:", type="password")
+    nueva_contraseña = st.text_input("Nueva contraseña:", type="password")
+
+    if st.button("Actualizar"):
+        # Aquí puedes colocar el código para verificar la contraseña actual y actualizarla
+        st.success("¡Contraseña actualizada con éxito!")
