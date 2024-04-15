@@ -67,15 +67,6 @@ def crear_recetas():
     agregar_receta("Pizza Margarita", "Italia", ["Masa de pizza", "Tomate", "Mozzarella", "Albahaca"], ["Extender la masa de pizza", "Agregar salsa de tomate y mozzarella", "Hornear y agregar albahaca fresca"])
 
     return almacen_recetas
-    # Convertir las recetas a un arreglo de NumPy
-   
-''' recetas = np.empty((3, 4), dtype=object)
-    recetas[0, :] = [receta1.nombre, receta1.pais, ", ".join(receta1.ingredientes), "\n".join(receta1.pasos)]
-    recetas[1, :] = [receta2.nombre, receta2.pais, ", ".join(receta2.ingredientes), "\n".join(receta2.pasos)]
-    recetas[2, :] = [receta3.nombre, receta3.pais, ", ".join(receta3.ingredientes), "\n".join(receta3.pasos)]
-'''
-
-    
 
 # Función para imprimir las recetas encontradas
 def imprimir_recetas(recetas):
