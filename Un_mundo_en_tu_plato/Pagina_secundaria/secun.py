@@ -1,5 +1,5 @@
 import streamlit as st
-import graficos
+# import graficos
 
 # Título de la página
 st.title("Contenido")

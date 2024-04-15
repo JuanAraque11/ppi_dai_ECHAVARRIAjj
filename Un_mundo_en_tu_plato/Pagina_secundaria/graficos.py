@@ -1,7 +1,8 @@
 import streamlit as st
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import numpy as np
 
+'''
 def mostrar_opcion_1():
     # Título de la opción
     st.title("Opción 1: Distribución Geográfica y Popularidad de Platos")
@@ -18,4 +19,4 @@ def mostrar_opcion_1():
     plt.xticks(rotation=45)
 
     # Mostrar gráfico interactivo
-    st.pyplot(fig)
+    st.pyplot(fig) '''
