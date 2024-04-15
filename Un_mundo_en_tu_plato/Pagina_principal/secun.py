@@ -1,19 +1,19 @@
 import streamlit as st
 
 if st.button("Usuario"):
+
     # Desplegar menú de opciones
     option = st.selectbox("Selecciona una opción:", ["Actualizar Contraseña", "Ver Perfil"])
     
     # Actuar según la opción seleccionada
     if option == "Actualizar Contraseña":
-        st.write("Opción seleccionada: Actualizar Contraseña")
         contraseña_actual = st.text_input("Contraseña actual:", type="password")
         nueva_contraseña = st.text_input("Nueva contraseña:", type="password")
         if st.button("Actualizar"):
             # Aquí puedes colocar el código para verificar la contraseña actual y actualizarla
             st.success("¡Contraseña actualizada con éxito!")
     elif option == "Ver Perfil":
-        st.write("Opción seleccionada: Ver Perfil")
+        st.write("Nombre de usuario: ")
         # Aquí puedes colocar el código para ver el perfil del usuario
 
 # Título de la página
