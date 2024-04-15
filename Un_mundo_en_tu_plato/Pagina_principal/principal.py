@@ -27,7 +27,7 @@ def main():
     comidas = recetas.crear_recetas()
 
     if opcion == "Iniciar sesión":
-        estado, en_sesion = login.login_user()[0]
+        estado, en_sesion = login.login_user()
         if not estado:
             st.info("Por favor, inicie sesión.")
         else:
