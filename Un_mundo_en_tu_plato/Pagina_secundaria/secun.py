@@ -1,15 +1,4 @@
 import streamlit as st
-# import graficos
-
-# Botón para mostrar las opciones del usuario
-if "user" not in st.session_state:
-    st.session_state.user = False  # Establecer el estado inicial del botón
-
-if st.button("Usuario"):
-    st.session_state.user = not st.session_state.user  # Alternar el estado del botón
-
-if st.session_state.user:
-    st.write("Aquí puedes escribir tu user.")
 
 if st.button("Usuario"):
     # Desplegar menú de opciones
