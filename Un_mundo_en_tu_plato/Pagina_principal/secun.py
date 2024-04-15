@@ -1,5 +1,5 @@
 import streamlit as st
-import principal
+import funciones
 
 # Título de la página
 st.title("Contenido")
@@ -10,7 +10,7 @@ opcion = st.sidebar.selectbox("Selecciona una opción:", ["Opción 1", "Opción 
 # Mostrar contenido según la opción seleccionada
 if opcion == "Opción 1":
     st.write("Este es el contenido de la Opción 1.")
-    #graficos.mostrar_opcion_1()
+    funciones.mostrar_inicio()
 elif opcion == "Opción 2":
     st.write("Este es el contenido de la Opción 2.")
 elif opcion == "Opción 3":
