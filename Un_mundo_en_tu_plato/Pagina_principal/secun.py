@@ -2,7 +2,7 @@ import streamlit as st
 import funciones
 import pandas as pd
 #import scipy.stats as stats
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 
 # Título de la página
@@ -67,4 +67,5 @@ elif opcion == "Carga tus recetas":
         st.write(df_datos_adicionales)
 
 elif opcion == "Popularidad":
-    funciones.mostrar_grafico_popularidad(funciones.platos, funciones.popularidad)
+    st.write("")
+    #funciones.mostrar_grafico_popularidad(funciones.platos, funciones.popularidad)
