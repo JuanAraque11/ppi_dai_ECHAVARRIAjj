@@ -151,3 +151,29 @@ def info2():
 
     Comparte tus descubrimientos culinarios con amigos y familiares en las\
     redes sociales. ''')
+
+
+def mostrar_ventana_emergente():
+    """ Botón para abrir la ventana emergente para política
+    
+    Args: None
+
+    Returns: None
+    """
+    if st.button("Mostrar mensaje importante"):
+        with st.beta_expander("Mensaje Importante"):
+            st.write("¡Importante! Este es un mensaje que contiene información crucial.")
+
+            # Botones para aceptar o denegar
+            aceptar = st.button("Aceptar")
+            denegar = st.button("Denegar")
+
+            # Acciones al clickear los botones
+            if aceptar:
+                st.write("Has aceptado el mensaje. Puedes continuar utilizando la app.")
+            elif denegar:
+                st.write("Has denegado el mensaje. No podrás utilizar la app.")
+                st.stop()
+
+# Llamada a la función
+mostrar_ventana_emergente()
