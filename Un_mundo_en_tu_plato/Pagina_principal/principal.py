@@ -46,17 +46,17 @@ def main():
     # Creación
     comidas = recetas.crear_recetas()
 
-    estado = False
+    estado_politi = False
 
     if opcion == "Información y contacto":
-        if estado:
+        if estado_politi:
             pass
         else: 
             st.stop()
 
         info.info1()
     elif opcion == "Registrarse":
-        if estado:
+        if estado_politi:
             pass
         else: 
             st.stop()
@@ -66,8 +66,8 @@ def main():
             # register.show_registered_users()
     elif opcion == "Inicio":
 
-        estado = info.mostrar_ventana_emergente()
-        if estado:
+        estado_politi = info.mostrar_ventana_emergente()
+        if estado_politi:
             pass
         else: 
             st.stop()
@@ -82,14 +82,14 @@ def main():
             st.markdown("[Ir al enlace](https://unmundoentuplato-funciones.streamlit.app/)")
             st.write("La sesion pertenece a ", en_sesion.get_username())
     elif opcion == "Actualizar contraseña":
-        if estado:
+        if estado_politi:
             pass
         else: 
             st.stop()
 
         register.change_password()
     elif opcion == "Buscar recetas":
-        if estado:
+        if estado_politi:
             pass
         else: 
             st.stop()

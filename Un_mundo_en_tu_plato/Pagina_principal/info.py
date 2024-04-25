@@ -79,7 +79,7 @@ def mostrar_ventana_emergente():
     
     Args: None
 
-    Returns: None
+    Returns: 
     """
     st.write('''
     Política de tratamiento de datos personales para los usuarios de Un\
