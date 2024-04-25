@@ -48,15 +48,8 @@ def main():
     # Creación
     comidas = recetas.crear_recetas()
 
-    if opcion == "Iniciar sesión":
-        estado, en_sesion = login.login_user()
-        if not estado:
-            st.info("Por favor, inicie sesión.")
-        else:
-            
-            # Redirigir al usuario a un enlace externo después de iniciar sesión
-            st.markdown("[Ir al enlace](https://unmundoentuplato-funciones.streamlit.app/)")
-            st.write("La sesion pertenece a ", en_sesion.get_username())
+    if opcion == "Información y contacto.":
+        info.info1()
     elif opcion == "Registrarse":
         register.register_user()
         if st.button("Ver lista de usuarios"):
@@ -85,7 +78,6 @@ def main():
         else:
             st.subheader("No se encontraron recetas para el término de búsqueda.")
 
-    info.info1()
 
 
 if __name__ == "__main__":
