@@ -71,26 +71,6 @@ def info2():
     Comparte tus descubrimientos culinarios con amigos y familiares en las\
     redes sociales.
 
-   
-    La Aplicación toma medidas razonables para proteger los datos\
-    personales de sus usuarios contra la pérdida, el robo, el uso no\
-    autorizado, la divulgación y la alteración. Estas medidas incluyen\
-    medidas de seguridad físicas, técnicas y administrativas.
-
-    5. Derechos de los usuarios
-
-    Los usuarios tienen los siguientes derechos con respecto a sus datos\
-    personales:
-
-    Derecho de acceso: Los usuarios tienen derecho a acceder a sus datos\
-    personales y a obtener información sobre cómo se están utilizando sus\
-    datos.
-    Derecho de cambio: Los usuarios tienen derecho a solicitar la cambio de\
-    sus datos personales si son incorrectos o están incompletos o por deseo\
-    personal.
-    Derecho de supresión: Los usuarios tienen derecho a solicitar la\
-    supresión de sus datos personales en determinados casos.
-    Derecho de limitación del tratamiento: Los usuarios tienen derecho a\
     solicitar la limitación del tratamiento de sus datos personales en\
     determinados casos.
     ''')
