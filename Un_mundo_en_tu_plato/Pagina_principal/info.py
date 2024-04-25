@@ -43,88 +43,6 @@ def info1():
         st.markdown("- [Freelancer](https://www.freelancer.com/u/JuanJEchav?sb=t)")
         st.markdown("- [Fiverr](https://www.fiverr.com/juanjechav?public_mode=true)")
 
-    # Botón para mostrar/ocultar política de privacidad
-    if "show_privacy_policy" not in st.session_state:
-        st.session_state.show_privacy_policy = False  
-    
-    if st.button("Política de Privacidad"):
-        st.session_state.show_privacy_policy = not st.session_state.show_privacy_policy 
-    
-    if st.session_state.show_privacy_policy:
-        st.write('''
-        Política de tratamiento de datos personales para los usuarios de Un\
-        mundo en tu plato.
-
-        Un mundo en tu plato es una aplicación web que permite a los usuarios\
-        explorar y descubrir recetas auténticas de diferentes partes del mundo.\
-        La Aplicación está comprometida con la protección de la privacidad de\
-        sus usuarios y el tratamiento responsable de sus datos personales.
-
-        Esta Política de tratamiento de datos personales describe cómo la\
-        Aplicación recopila, utiliza, divulga y protege los datos personales\
-        de sus usuarios. Esta Política se aplica a toda la información que la\
-        Aplicación recopila a través de la Aplicación, el sitio web de la\
-        Aplicación y cualquier otro servicio relacionado con la Aplicación.
-
-        1. Recopilación de datos personales
-
-        La Aplicación recopila los siguientes datos personales de sus usuarios:
-
-        Información de registro: Cuando un usuario crea una cuenta en la\
-        Aplicación, se le solicita que proporcione cierta información, como su\
-        usuario y contraseña.
-        Datos de actividad: La Aplicación recopila datos sobre la actividad del\
-        usuario en la Aplicación, como las recetas que el usuario ha guardado.
-                    
-        2. Uso de datos personales
-
-        La Aplicación utiliza los datos personales de sus usuarios para los\
-        siguientes fines:
-
-        Proporcionar y mejorar la Aplicación: La Aplicación utiliza los datos\
-        personales de sus usuarios para proporcionarles la Aplicación y mejorar\
-        su experiencia.
-        Personalizar la experiencia del usuario: La Aplicación utiliza los\
-        datos personales de sus usuarios para personalizar su experiencia.
-        Investigación y desarrollo: La Aplicación puede utilizar los datos\
-        personales de sus usuarios para investigación y desarrollo.
-        
-        3. Divulgación de datos personales
-
-        La Aplicación no divulgará los datos personales de sus usuarios a\
-        terceros sin el consentimiento previo del usuario. Sin embargo, la\
-        Aplicación puede divulgar los datos personales de sus usuarios a\
-        terceros proveedores de servicios que ayudan a la Aplicación a operar,\
-        como proveedores de alojamiento web y proveedores de análisis.
-
-        4. Seguridad de los datos personales
-
-        La Aplicación toma medidas razonables para proteger los datos\
-        personales de sus usuarios contra la pérdida, el robo, el uso no\
-        autorizado, la divulgación y la alteración. Estas medidas incluyen\
-        medidas de seguridad físicas, técnicas y administrativas.
-
-        5. Derechos de los usuarios
-
-        Los usuarios tienen los siguientes derechos con respecto a sus datos\
-        personales:
-
-        Derecho de acceso: Los usuarios tienen derecho a acceder a sus datos\
-        personales y a obtener información sobre cómo se están utilizando sus\
-        datos.
-        Derecho de cambio: Los usuarios tienen derecho a solicitar la cambio de\
-        sus datos personales si son incorrectos o están incompletos o por deseo\
-        personal.
-        Derecho de supresión: Los usuarios tienen derecho a solicitar la\
-        supresión de sus datos personales en determinados casos.
-        Derecho de limitación del tratamiento: Los usuarios tienen derecho a\
-        solicitar la limitación del tratamiento de sus datos personales en\
-        determinados casos.
-        ''')
-    
-    # Pie de página
-    st.write("© 2024 Mi Empresa. Todos los derechos reservados.")
-
 
 def info2():
     
@@ -159,9 +77,80 @@ def mostrar_ventana_emergente():
     Args: None
 
     Returns: None
-"""
-    with st.expander("Mensaje Importante"):
-        st.write("¡Importante! Este es un mensaje que contiene información crucial.")
+    """
+    st.write('''
+    Política de tratamiento de datos personales para los usuarios de Un\
+    mundo en tu plato.
+
+    Un mundo en tu plato es una aplicación web que permite a los usuarios\
+    explorar y descubrir recetas auténticas de diferentes partes del mundo.\
+    La Aplicación está comprometida con la protección de la privacidad de\
+    sus usuarios y el tratamiento responsable de sus datos personales.
+
+    Esta Política de tratamiento de datos personales describe cómo la\
+    Aplicación recopila, utiliza, divulga y protege los datos personales\
+    de sus usuarios. Esta Política se aplica a toda la información que la\
+    Aplicación recopila a través de la Aplicación, el sitio web de la\
+    Aplicación y cualquier otro servicio relacionado con la Aplicación.
+
+    1. Recopilación de datos personales
+
+    La Aplicación recopila los siguientes datos personales de sus usuarios:
+
+    Información de registro: Cuando un usuario crea una cuenta en la\
+    Aplicación, se le solicita que proporcione cierta información, como su\
+    usuario y contraseña.
+    Datos de actividad: La Aplicación recopila datos sobre la actividad del\
+    usuario en la Aplicación, como las recetas que el usuario ha guardado.
+                
+    2. Uso de datos personales
+
+    La Aplicación utiliza los datos personales de sus usuarios para los\
+    siguientes fines:
+
+    Proporcionar y mejorar la Aplicación: La Aplicación utiliza los datos\
+    personales de sus usuarios para proporcionarles la Aplicación y mejorar\
+    su experiencia.
+    Personalizar la experiencia del usuario: La Aplicación utiliza los\
+    datos personales de sus usuarios para personalizar su experiencia.
+    Investigación y desarrollo: La Aplicación puede utilizar los datos\
+    personales de sus usuarios para investigación y desarrollo.
+    
+    3. Divulgación de datos personales
+
+    La Aplicación no divulgará los datos personales de sus usuarios a\
+    terceros sin el consentimiento previo del usuario. Sin embargo, la\
+    Aplicación puede divulgar los datos personales de sus usuarios a\
+    terceros proveedores de servicios que ayudan a la Aplicación a operar,\
+    como proveedores de alojamiento web y proveedores de análisis.
+
+    4. Seguridad de los datos personales
+
+    La Aplicación toma medidas razonables para proteger los datos\
+    personales de sus usuarios contra la pérdida, el robo, el uso no\
+    autorizado, la divulgación y la alteración. Estas medidas incluyen\
+    medidas de seguridad físicas, técnicas y administrativas.
+
+    5. Derechos de los usuarios
+
+    Los usuarios tienen los siguientes derechos con respecto a sus datos\
+    personales:
+
+    Derecho de acceso: Los usuarios tienen derecho a acceder a sus datos\
+    personales y a obtener información sobre cómo se están utilizando sus\
+    datos.
+    Derecho de cambio: Los usuarios tienen derecho a solicitar la cambio de\
+    sus datos personales si son incorrectos o están incompletos o por deseo\
+    personal.
+    Derecho de supresión: Los usuarios tienen derecho a solicitar la\
+    supresión de sus datos personales en determinados casos.
+    Derecho de limitación del tratamiento: Los usuarios tienen derecho a\
+    solicitar la limitación del tratamiento de sus datos personales en\
+    determinados casos.
+    ''')
+
+    # Pie de página
+    st.write("© 2024. Todos los derechos reservados.")
 
         # Botones para aceptar o denegar
         aceptar = st.button("Aceptar")
@@ -173,6 +162,3 @@ def mostrar_ventana_emergente():
         elif denegar:
             st.write("Has denegado el mensaje. No podrás utilizar la app.")
             st.stop()
-
-# Llamada a la función
-mostrar_ventana_emergente()
