@@ -6,8 +6,7 @@ import register
 from usuario import Usuario
 
 # Menú desplegable para elegir entre iniciar sesión y registrar usuario
-opcion = st.sidebar.selectbox("Menú:", ["Inicio", "Iniciar sesión",
-                    "Registrarse", "Actualizar contraseña","Buscar recetas"])
+opcion = st.sidebar.selectbox("Menú:", ["Inicio","Registrarse", "Actualizar contraseña","Buscar recetas", , "Información y contacto"])
 
 # Función para buscar recetas por nombre y país
 def buscar_recetas(recetas, termino_busqueda):
@@ -48,7 +47,7 @@ def main():
     # Creación
     comidas = recetas.crear_recetas()
 
-    if opcion == "Información y contacto.":
+    if opcion == "Información y contacto":
         info.info1()
     elif opcion == "Registrarse":
         register.register_user()
