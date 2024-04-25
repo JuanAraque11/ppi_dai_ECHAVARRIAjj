@@ -45,8 +45,8 @@ def main():
     Returns: None
     """
 
-    info.mostrar_ventana_emergente()
-    
+    ##info.mostrar_ventana_emergente()
+
     # Creación
     comidas = recetas.crear_recetas()
 
