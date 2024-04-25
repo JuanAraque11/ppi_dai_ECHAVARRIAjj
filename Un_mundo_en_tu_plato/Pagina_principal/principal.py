@@ -46,45 +46,45 @@ def main():
     # Creación
     comidas = recetas.crear_recetas()
 
-    estado_politi = info.mostrar_ventana_emergente()
+    # estado_politi = info.mostrar_ventana_emergente()
 
-    if estado_politi:
+    # if estado_politi:
 
-        if opcion == "Información y contacto":
+    if opcion == "Información y contacto":
 
-            info.info1()
-        elif opcion == "Registrarse":
-            register.register_user()
-            # if st.button("Ver lista de usuarios"):
-                # register.show_registered_users()
-        elif opcion == "Inicio":
+        info.info1()
+    elif opcion == "Registrarse":
+        register.register_user()
+        # if st.button("Ver lista de usuarios"):
+            # register.show_registered_users()
+    elif opcion == "Inicio":
 
-            info.info2()
-            estado, en_sesion = login.login_user()
-            if not estado:
-                st.info("Por favor, inicie sesión.")
+        info.info2()
+        estado, en_sesion = login.login_user()
+        if not estado:
+            st.info("Por favor, inicie sesión.")
+        else:
+            
+            # Redirigir al usuario a un enlace externo después de iniciar sesión
+            st.markdown("[Ir al enlace](https://unmundoentuplato-funciones.streamlit.app/)")
+            st.write("La sesion pertenece a ", en_sesion.get_username())
+    elif opcion == "Actualizar contraseña":
+
+        register.change_password()
+    elif opcion == "Buscar recetas":
+
+        termino_busqueda = st.sidebar.text_input("Buscar recetas por nombre o país:")
+        recetas_filtradas = buscar_recetas(comidas, termino_busqueda)
+        if recetas_filtradas:
+            st.subheader("Recetas (Los países disponibles por el momento son Colombia, Italia, México y Tailandia)")
+            if termino_busqueda:
+                recetas.imprimir_recetas(recetas_filtradas)
             else:
-                
-                # Redirigir al usuario a un enlace externo después de iniciar sesión
-                st.markdown("[Ir al enlace](https://unmundoentuplato-funciones.streamlit.app/)")
-                st.write("La sesion pertenece a ", en_sesion.get_username())
-        elif opcion == "Actualizar contraseña":
-
-            register.change_password()
-        elif opcion == "Buscar recetas":
-
-            termino_busqueda = st.sidebar.text_input("Buscar recetas por nombre o país:")
-            recetas_filtradas = buscar_recetas(comidas, termino_busqueda)
-            if recetas_filtradas:
-                st.subheader("Recetas (Los países disponibles por el momento son Colombia, Italia, México y Tailandia)")
-                if termino_busqueda:
-                    recetas.imprimir_recetas(recetas_filtradas)
-                else:
-                    pass
-            else:
-                st.subheader("No se encontraron recetas para el término de búsqueda.")
-    else:
-        st.stop()
+                pass
+        else:
+            st.subheader("No se encontraron recetas para el término de búsqueda.")
+    # else:
+        # st.stop()
 
 
 if __name__ == "__main__":
