@@ -159,21 +159,20 @@ def mostrar_ventana_emergente():
     Args: None
 
     Returns: None
-    """
-    if st.button("Mostrar mensaje importante"):
-        with st.beta_expander("Mensaje Importante"):
-            st.write("¡Importante! Este es un mensaje que contiene información crucial.")
+"""
+    with st.expander("Mensaje Importante"):
+        st.write("¡Importante! Este es un mensaje que contiene información crucial.")
 
-            # Botones para aceptar o denegar
-            aceptar = st.button("Aceptar")
-            denegar = st.button("Denegar")
+        # Botones para aceptar o denegar
+        aceptar = st.button("Aceptar")
+        denegar = st.button("Denegar")
 
-            # Acciones al clickear los botones
-            if aceptar:
-                st.write("Has aceptado el mensaje. Puedes continuar utilizando la app.")
-            elif denegar:
-                st.write("Has denegado el mensaje. No podrás utilizar la app.")
-                st.stop()
+        # Acciones al clickear los botones
+        if aceptar:
+            st.write("Has aceptado el mensaje. Puedes continuar utilizando la app.")
+        elif denegar:
+            st.write("Has denegado el mensaje. No podrás utilizar la app.")
+            st.stop()
 
 # Llamada a la función
 mostrar_ventana_emergente()
