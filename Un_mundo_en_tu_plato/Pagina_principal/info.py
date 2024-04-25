@@ -152,13 +152,13 @@ def mostrar_ventana_emergente():
     # Pie de página
     st.write("© 2024. Todos los derechos reservados.")
 
-        # Botones para aceptar o denegar
-        aceptar = st.button("Aceptar")
-        denegar = st.button("Denegar")
+    # Botones para aceptar o denegar
+    aceptar = st.button("Aceptar")
+    denegar = st.button("Denegar")
 
-        # Acciones al clickear los botones
-        if aceptar:
-            st.write("Has aceptado el mensaje. Puedes continuar utilizando la app.")
-        elif denegar:
-            st.write("Has denegado el mensaje. No podrás utilizar la app.")
-            st.stop()
+    # Acciones al clickear los botones
+    if aceptar:
+        st.write("Has aceptado el mensaje. Puedes continuar utilizando la app.")
+    elif denegar:
+        st.write("Has denegado el mensaje. No podrás utilizar la app.")
+        st.stop()
