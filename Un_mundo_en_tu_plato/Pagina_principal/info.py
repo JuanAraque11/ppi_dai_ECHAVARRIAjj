@@ -71,8 +71,6 @@ def info2():
     Comparte tus descubrimientos culinarios con amigos y familiares en las\
     redes sociales.
 
-    solicitar la limitación del tratamiento de sus datos personales en\
-    determinados casos.
     ''')
 
 
