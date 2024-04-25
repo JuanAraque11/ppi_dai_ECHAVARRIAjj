@@ -46,6 +46,8 @@ def main():
     # Creación
     comidas = recetas.crear_recetas()
 
+    estado = False
+
     if opcion == "Información y contacto":
         if estado:
             pass
