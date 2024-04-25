@@ -48,7 +48,7 @@ def info2():
     
     # Título y autor
     st.title("Un mundo en tu plato")
-    st.write('''Emprende un viaje culinario alrededor del mundo sin salir de\
+    st.write("""Emprende un viaje culinario alrededor del mundo sin salir de\
     casa.
     Descubre recetas auténticas de cada rincón del planeta, desde la vibrante\
     cocina mexicana hasta los exóticos sabores tailandeses.
@@ -69,7 +69,7 @@ def info2():
 
     Comparte tus descubrimientos culinarios con amigos y familiares en las\
     redes sociales.
-    ''')
+    """)
 
 
 def mostrar_ventana_emergente():
