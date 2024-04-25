@@ -162,6 +162,9 @@ def mostrar_ventana_emergente():
     # Acciones al clickear los botones
     if aceptar:
         st.write("Has aceptado el mensaje. Puedes continuar utilizando la app.")
+        return True
     elif denegar:
         st.write("Has denegado el mensaje. No podrás utilizar la app.")
-        st.stop()
+        return False
+    else:
+        return False

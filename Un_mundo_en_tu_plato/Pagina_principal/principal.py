@@ -43,7 +43,10 @@ def main():
 
     Returns: None
     """
-
+    if info.mostrar_ventana_emergente():
+        pass
+    else: 
+        st.stop()
     # Creación
     comidas = recetas.crear_recetas()
 
@@ -51,8 +54,8 @@ def main():
         info.info1()
     elif opcion == "Registrarse":
         register.register_user()
-        if st.button("Ver lista de usuarios"):
-            register.show_registered_users()
+        # if st.button("Ver lista de usuarios"):
+            # register.show_registered_users()
     elif opcion == "Inicio":
         info.info2()
         estado, en_sesion = login.login_user()
