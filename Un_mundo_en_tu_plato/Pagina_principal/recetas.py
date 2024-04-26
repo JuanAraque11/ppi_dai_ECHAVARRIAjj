@@ -1,4 +1,4 @@
-import numpy as np
+import pandas as pd
 import streamlit as st
 
 class Receta:
@@ -132,3 +132,21 @@ def imprimir_recetas(recetas):
             for j, paso in enumerate(receta.pasos, start=1):
                 st.write(f"  {j}. {paso}")
             st.write()
+
+
+# Guardar en la variable 'ruta' la url del dataset
+ruta = "https://raw.githubusercontent.com/JuanAraque11/ppi_dai_ECHAVARRIAjj/main/Un_mundo_en_tu_plato/Datos/recetas.csv"
+
+# Cargar el dataset a partir de la ruta establecida
+data = pd.read_csv(ruta, delimiter="|")
+
+def mostrar_receta_aleatoria():
+    # Seleccionar una fila aleatoria del DataFrame
+    receta_aleatoria = data.sample()
+
+    # Mostrar la información de la receta aleatoria seleccionada
+    st.write("Receta al Azar:")
+    st.write(f"Nombre: {receta_aleatoria['Nombre'].values[0]}")
+    st.write(f"Tiempo: {receta_aleatoria['Tiempo'].values[0]}")
+    st.write(f"Ingredientes: {receta_aleatoria['Ingredientes'].values[0]}")
+    st.write(f"Link de la Receta: {receta_aleatoria['Link_receta'].values[0]}")
