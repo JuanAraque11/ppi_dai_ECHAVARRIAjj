@@ -43,8 +43,6 @@ def main():
 
     Returns: None
     """
-    # Creación
-    comidas = recetas.crear_recetas()
 
     # estado_politi = info.mostrar_ventana_emergente()
 
