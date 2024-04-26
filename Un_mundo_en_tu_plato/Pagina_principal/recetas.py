@@ -54,7 +54,7 @@ def buscar_por_valoracion(valoracion, opcion):
     if opcion == 'mayores':
         recetas_filtradas = data[data['Valoracion'] > valoracion]
     elif opcion == 'menores':
-        recetas_filtradas = data[(data['Valoracion'] < valoracion) & (valoracion != 0)]
+        recetas_filtradas = data[(data['Valoracion'] < valoracion) & data[(data['Valoracion'] != 0)]]
     elif opcion == 'iguales':
         recetas_filtradas = data[data['Valoracion'] == valoracion]
     elif opcion == 'sin valoración':
