@@ -101,7 +101,7 @@ def main():
                 st.write("No se encontraron recetas.")
             else:
                 st.write("Recetas encontradas:")
-                st.write(recetas_valoradas[['Nombre', 'Tiempo', 'Ingredientes', 'Link_receta']])
+                st.write(recetas_valoradas[['Nombre', 'Tiempo', 'Ingredientes', 'Valoracion','Link_receta']])
 
 
 
