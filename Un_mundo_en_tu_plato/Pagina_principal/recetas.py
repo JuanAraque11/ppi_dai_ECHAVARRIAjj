@@ -49,14 +49,16 @@ def buscar_por_valoracion(valoracion, opcion):
     """
 
     reemplazar_nulos()
-    
+
     # Filtrar recetas según la opción seleccionada
     if opcion == 'mayores':
         recetas_filtradas = data[data['Valoracion'] > valoracion]
     elif opcion == 'menores':
-        recetas_filtradas = data[data['Valoracion'] < valoracion]
+        recetas_filtradas = data[data['Valoracion'] < valoracion and valoracion != 0]
     elif opcion == 'iguales':
         recetas_filtradas = data[data['Valoracion'] == valoracion]
+    elif opcion == 'sin valoración':
+        recetas_filtradas = data[data['Valoracion'] == 0]
     else:
         st.error("Opción de búsqueda no válida. Las opciones válidas son 'mayores', 'menores' o 'iguales'.")
         return None
