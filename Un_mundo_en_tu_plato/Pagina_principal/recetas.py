@@ -152,18 +152,11 @@ def mostrar_receta_aleatoria():
     st.write(f"Link de la Receta: {receta_aleatoria['Link_receta'].values[0]}")
 
 
-def buscar_receta_por_ingrediente(ingrediente):
-    # Filtrar el DataFrame por el ingrediente proporcionado
-    recetas_encontradas = data[data['Ingredientes'].str.contains(ingrediente, case=False)]
+def buscar_receta_por_ingrediente(ingrediente):    
+    
+    recetas_encontradas = data[data['Ingredientes'].apply(lambda x: ingrediente_busqueda.lower() in x.lower())]
+    if recetas_encontradas:
+        return recetas_encontradas
 
-    # Mostrar las recetas encontradas
-    if not recetas_encontradas.empty:
-        st.write(f"Recetas encontradas con '{ingrediente}':")
-        for index, receta in recetas_encontradas.iterrows():
-            st.write(f"Nombre: {receta['Nombre']}")
-            st.write(f"Tiempo: {receta['Tiempo']}")
-            st.write(f"Ingredientes: {receta['Ingredientes']}")
-            st.write(f"Link de la Receta: {receta['Link_receta']}")
-            st.write("---")
     else:
         st.write(f"No se encontraron recetas con '{ingrediente}'")

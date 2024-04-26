@@ -74,8 +74,8 @@ def main():
     elif opcion == "Buscar recetas":
         # Interfaz de usuario
         ingrediente_busqueda = st.text_input("Ingrese un ingrediente:")
-        if ingrediente_busqueda:
-            recetas.buscar_receta_por_ingrediente(ingrediente_busqueda)
+        recetas_encontradas = recetas.buscar_receta_por_ingrediente(ingrediente_busqueda)
+        st.write(recetas_encontradas[['Nombre', 'Tiempo', 'Ingredientes', 'Link_receta']])
 
     # else:
         # st.stop()
