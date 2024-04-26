@@ -87,7 +87,7 @@ def main():
     # else:
         # st.stop()
     elif opcion == "Receta al azar":
-        st.title("Receta al Azar:")
+        st.title("Receta al Azar")
         recetas.mostrar_receta_aleatoria()
 
 
