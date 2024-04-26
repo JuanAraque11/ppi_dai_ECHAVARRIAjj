@@ -145,7 +145,7 @@ def mostrar_receta_aleatoria():
     receta_aleatoria = data.sample()
 
     # Mostrar la información de la receta aleatoria seleccionada
-    st.write("Receta al Azar:")
+    st.title("Receta al Azar:")
     st.write(f"Nombre: {receta_aleatoria['Nombre'].values[0]}")
     st.write(f"Tiempo: {receta_aleatoria['Tiempo'].values[0]}")
     st.write(f"Ingredientes: {receta_aleatoria['Ingredientes'].values[0]}")
