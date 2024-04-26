@@ -6,7 +6,7 @@ import register
 from usuario import Usuario
 
 # Menú desplegable para elegir entre iniciar sesión y registrar usuario
-opcion = st.sidebar.selectbox("Menú:", ["Inicio", "Registrarse", "Actualizar contraseña", "Buscar recetas", "Receta al azar", "Información y contacto"])
+opcion = st.sidebar.selectbox("Menú:", ["Inicio", "Registrarse", "Actualizar contraseña", "Buscar recetas", "Receta al azar", "Buscar por valoración","Información y contacto"])
 
 # Función para buscar recetas por nombre y país
 def buscar_recetas(recetas, termino_busqueda):
@@ -87,6 +87,22 @@ def main():
     elif opcion == "Receta al azar":
         st.title("Receta al azar")
         recetas.mostrar_receta_aleatoria()
+
+    elif opcion == "Buscar por valoración":
+        # Ejemplo de uso
+        # Suponiendo que 'data' es tu DataFrame de recetas
+        st.title("Buscar por valoración")
+        valoracion = st.number_input("Ingrese la valoración a buscar", min_value=0.0, max_value=5.0, step=0.1, value=3.0)
+        opcion_buscar = st.radio("Selecciona una opción:", ['mayores', 'menores', 'iguales'])
+
+        if st.button("Buscar"):
+            recetas_valoradas = recetas.buscar_por_valoracion(valoracion, opcion_buscar)
+            if recetas_valoradas.empty:
+                st.write("No se encontraron recetas.")
+            else:
+                st.write("Recetas encontradas:")
+                st.write(recetas_valoradas[['Nombre', 'Tiempo', 'Ingredientes', 'Link_receta']])
+
 
 
 if __name__ == "__main__":

@@ -22,8 +22,9 @@ def mostrar_receta_aleatoria():
 
 
 def reemplazar_nulos():
-  # Reemplazar los nulos de la columna 'Ingredientes' con una cadena vacía
-  data['Ingredientes'] = data['Ingredientes'].fillna('')
+    # Reemplazar los nulos de la columna 'Ingredientes' con una cadena vacía
+    data['Ingredientes'] = data['Ingredientes'].fillna('')
+    data['Valoracion'] = data['Valoracion'].fillna(0)
 
 
 def buscar_receta_por_ingrediente(ingrediente):    
@@ -33,3 +34,29 @@ def buscar_receta_por_ingrediente(ingrediente):
     recetas_filtradas = data[data['Ingredientes'].str.contains(ingrediente)]
     recetas_filtradas
     return recetas_filtradas
+
+
+def buscar_por_valoracion(valoracion, opcion):
+    """
+    Busca recetas según la valoración especificada.
+
+    Args:
+    - valoracion (float): Valor de la valoración a buscar.
+    - opcion (str): Opción de búsqueda ('mayores', 'menores' o 'iguales').
+
+    Returns:
+    - DataFrame: DataFrame con las recetas que cumplen con los criterios de búsqueda.
+    """
+    # Filtrar recetas según la opción seleccionada
+    if opcion == 'mayores':
+        recetas_filtradas = data[data['Valoracion'] > valoracion]
+    elif opcion == 'menores':
+        recetas_filtradas = data[data['Valoracion'] < valoracion]
+    elif opcion == 'iguales':
+        recetas_filtradas = data[data['Valoracion'] == valoracion]
+    else:
+        st.error("Opción de búsqueda no válida. Las opciones válidas son 'mayores', 'menores' o 'iguales'.")
+        return None
+    
+    return recetas_filtradas
+
