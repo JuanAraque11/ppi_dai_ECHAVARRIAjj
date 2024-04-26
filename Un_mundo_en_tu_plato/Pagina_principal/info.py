@@ -8,14 +8,31 @@ def info1():
 
     Returns: None
     """
-    st.title("Información Importante")
+    st.title("Información importante")
 
     st.write("Bienvenido a mi página web, Aquí encontrarás información\
     relevante sobre mi servicio.")
 
-    # Enlaces a secciones específicas
-    st.write("Para obtener más detalles, visita las siguientes secciones:")
+    st.write('''
+            Soy Juan Araque, estudiante de Ingeniería de Sistemas en la\
+            Universidad Nacional de Colombia sede Medellín Facultad de\
+            Minas, actualmente cursando septimo semestre. Poseo\
+            conocimientos en una variedad de lenguajes de programación,\
+            incluyendo Python, Java, SQL, C, entre otros. Mi pasión por la\
+            tecnología y el desarrollo de software me impulsa a buscar\
+            oportunidades para aplicar y mejorar mis habilidades en\
+            proyectos desafiantes.
+            ''')
+    st.write("Puedes contactar conmigo por medio de: ")
+    st.markdown("- [LinkedIn](https://www.linkedin.com/in/juan-jose-echavarria-araque-a92286296)")
+    st.markdown("- [Reddit](https://www.reddit.com/user/JuanAraque/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)")
+    st.write()
+    st.write("O puedes contratar mis servicios por medio de: ")
+    st.markdown("- [Upwork](https://www.upwork.com/workwith/juanjosee)")
+    st.markdown("- [Freelancer](https://www.freelancer.com/u/JuanJEchav?sb=t)")
+    st.markdown("- [Fiverr](https://www.fiverr.com/juanjechav?public_mode=true)")
 
+    """
     # Botón para mostrar/ocultar información de contacto
     if "show_contact_info" not in st.session_state:
         st.session_state.show_contact_info = False  
@@ -41,7 +58,8 @@ def info1():
         st.write("O puedes contratar mis servicios por medio de: ")
         st.markdown("- [Upwork](https://www.upwork.com/workwith/juanjosee)")
         st.markdown("- [Freelancer](https://www.freelancer.com/u/JuanJEchav?sb=t)")
-        st.markdown("- [Fiverr](https://www.fiverr.com/juanjechav?public_mode=true)")
+        st.markdown("- [Fiverr](https://www.fiverr.com/juanjechav?public_mode=true)") """
+
 
 
 def info2():
