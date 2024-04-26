@@ -80,7 +80,7 @@ def main():
                 st.write("No se encontraron recetas con ese ingrediente.")
             else:
                 st.write("Recetas encontradas:")
-                st.write(recetas_encontradas[['Nombre', 'Tiempo', 'Ingredientes', 'Link receta']])
+                st.write(recetas_encontradas[['Nombre', 'Tiempo', 'Ingredientes', 'Link_receta']])
 
     # else:
         # st.stop()
