@@ -73,9 +73,16 @@ def main():
         register.change_password()
     elif opcion == "Buscar recetas":
         # Interfaz de usuario
+        st.title("Buscar Recetas por Ingredientes")
         ingrediente_busqueda = st.text_input("Ingrese un ingrediente:")
-        recetas_encontradas = recetas.buscar_receta_por_ingrediente(ingrediente_busqueda)
-        st.write(recetas_encontradas[['Nombre', 'Tiempo', 'Ingredientes', 'Link_receta']])
+        buscar_button = st.button("Buscar Recetas")
+        if buscar_button:
+            recetas_encontradas = recetas.buscar_receta_por_ingrediente(ingrediente_busqueda)
+            if recetas_encontradas.empty:
+                st.write("No se encontraron recetas con ese ingrediente.")
+            else:
+                st.write("Recetas encontradas:")
+                st.write(recetas_encontradas[['Nombre', 'Tiempo', 'Ingredientes', 'Link_receta']])
 
     # else:
         # st.stop()

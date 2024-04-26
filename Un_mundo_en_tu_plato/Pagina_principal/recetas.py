@@ -160,8 +160,5 @@ def buscar_receta_por_ingrediente(ingrediente):
     reemplazar_nulos()
 
     recetas_filtradas = data[data['Ingredientes'].str.contains(ingrediente)]
-    if recetas_filtradas:
-        return recetas_filtradas
-
-    else:
-        st.write(f"No se encontraron recetas con '{ingrediente}'")
+    recetas_filtradas
+    return recetas_filtradas
