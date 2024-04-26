@@ -72,17 +72,11 @@ def main():
 
         register.change_password()
     elif opcion == "Buscar recetas":
+        # Interfaz de usuario
+        ingrediente_busqueda = st.text_input("Ingrese un ingrediente:")
+        if ingrediente_busqueda:
+            recetas.buscar_receta_por_ingrediente(ingrediente_busqueda)
 
-        termino_busqueda = st.sidebar.text_input("Buscar recetas por nombre o país:")
-        recetas_filtradas = buscar_recetas(comidas, termino_busqueda)
-        if recetas_filtradas:
-            st.subheader("Recetas (Los países disponibles por el momento son Colombia, Italia, México y Tailandia)")
-            if termino_busqueda:
-                recetas.imprimir_recetas(recetas_filtradas)
-            else:
-                pass
-        else:
-            st.subheader("No se encontraron recetas para el término de búsqueda.")
     # else:
         # st.stop()
     elif opcion == "Receta al azar":
