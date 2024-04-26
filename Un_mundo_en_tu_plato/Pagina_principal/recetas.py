@@ -151,12 +151,17 @@ def mostrar_receta_aleatoria():
     st.write(f"Ingredientes: {receta_aleatoria['Ingredientes'].values[0]}")
     st.write(f"Link de la Receta: {receta_aleatoria['Link_receta'].values[0]}")
 
+def reemplazar_nulos():
+  # Reemplazar los nulos de la columna 'Ingredientes' con una cadena vacía
+  data['Ingredientes'] = data['Ingredientes'].fillna('')
 
 def buscar_receta_por_ingrediente(ingrediente):    
     
-    recetas_encontradas = data[data['Ingredientes'].apply(lambda x: ingrediente_busqueda.lower() in x.lower())]
-    if recetas_encontradas:
-        return recetas_encontradas
+    reemplazar_nulos()
+
+    recetas_filtradas = data[data['Ingredientes'].str.contains(ingrediente_busqueda)]
+    if recetas_filtradas:
+        return recetas_filtradas
 
     else:
         st.write(f"No se encontraron recetas con '{ingrediente}'")
