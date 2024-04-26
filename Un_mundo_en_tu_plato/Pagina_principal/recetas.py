@@ -47,6 +47,9 @@ def buscar_por_valoracion(valoracion, opcion):
     Returns:
     - DataFrame: DataFrame con las recetas que cumplen con los criterios de búsqueda.
     """
+
+    reemplazar_nulos()
+    
     # Filtrar recetas según la opción seleccionada
     if opcion == 'mayores':
         recetas_filtradas = data[data['Valoracion'] > valoracion]
