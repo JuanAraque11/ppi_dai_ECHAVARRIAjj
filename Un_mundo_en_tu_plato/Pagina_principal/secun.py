@@ -1,6 +1,7 @@
 import streamlit as st
 import funciones
 import pandas as pd
+import recetas
 #import scipy.stats as stats
 #import matplotlib.pyplot as plt
 
@@ -68,7 +69,7 @@ def main():
 
     elif opcion == "Elegir recetas":
 
-        funciones.elegir_receta()
+        recetas.elegir_recetaa()
         #funciones.mostrar_grafico_popularidad(funciones.platos, funciones.popularidad)
 
     elif opcion == "Distribuciones":
