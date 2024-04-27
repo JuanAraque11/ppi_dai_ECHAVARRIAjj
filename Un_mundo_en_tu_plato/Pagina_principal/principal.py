@@ -68,8 +68,7 @@ def main():
         recetas.mostrar_receta_aleatoria()
 
     elif opcion == "Buscar por valoración":
-        # Ejemplo de uso
-        # Suponiendo que 'data' es tu DataFrame de recetas
+
         st.title("Buscar por valoración")
         valoracion = st.number_input("Ingrese la valoración a buscar", min_value=1.0, max_value=5.0, step=0.1, value=3.0)
         opcion_buscar = st.radio("Selecciona una opción:", ['mayores', 'menores', 'iguales', 'sin valoración'])

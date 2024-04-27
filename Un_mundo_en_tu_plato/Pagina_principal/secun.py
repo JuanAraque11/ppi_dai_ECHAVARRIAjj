@@ -9,7 +9,7 @@ def mostrar_pagina2():
     st.title("Contenido")
 
     # Menú de opciones desplegables
-    opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga tus recetas", "Popularidad", "Distribuciones"])
+    opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga tus recetas", "Elegir recetas", "Distribuciones"])
 
     # Mostrar contenido según la opción seleccionada
     if opcion == "Información":
@@ -66,8 +66,9 @@ def mostrar_pagina2():
             st.write("Datos adicionales cargados:")
             st.write(df_datos_adicionales)
 
-    elif opcion == "Popularidad":
-        st.write("")
+    elif opcion == "Elegir recetas":
+
+        funciones.elegir_receta()
         #funciones.mostrar_grafico_popularidad(funciones.platos, funciones.popularidad)
 
     elif opcion == "Distribuciones":

@@ -25,6 +25,8 @@ def reemplazar_nulos():
     # Reemplazar los nulos de la columna 'Ingredientes' con una cadena vacía
     data['Ingredientes'] = data['Ingredientes'].fillna('')
     data['Valoracion'] = data['Valoracion'].fillna(0)
+    data['Dificultad'] = data['Dificultad'].fillna('media')
+    data['Tipo'] = data['Tipo'].fillna('Entrante')
 
 
 def buscar_receta_por_ingrediente(ingrediente):    
