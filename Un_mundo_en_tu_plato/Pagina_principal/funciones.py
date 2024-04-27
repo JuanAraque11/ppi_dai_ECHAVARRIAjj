@@ -105,8 +105,8 @@ def elegir_receta():
     reemplazar_nulos()
 
     st.title("Elegir recetas")
-    seleccion_tipo = st.selectbox("Selecciona el tipo de receta:", ["Acompañamiento", "Cena", "Cumpleaños", "Desayuno", "Entrante", "Merienda", "Plato principal", "Postre"])
-    seleccion_difi = st.selectbox("Selecciona la dificultad de la receta:", ["muy bajo", "bajo", "medio", "alto", "muy alto"])
+    seleccion_tipo = st.selectbox("Selecciona el tipo de receta:", ['Acompañamiento','Cena', 'Cumpleaños', 'Desayuno', 'Entrante', 'Merienda', 'Plato principal', 'Postre'])
+    seleccion_difi = st.selectbox("Selecciona la dificultad de la receta:", ['muy bajo', 'bajo', 'medio', 'alto', 'muy alto'])
 
     if st.button("Buscar"):
         recetas = data[(data['Tipo'] == seleccion_tipo) & (data['Dificultad'] == seleccion_difi)]
