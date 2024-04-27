@@ -64,7 +64,7 @@ def main():
                 df_datos_adicionales = pd.read_csv(archivo)
             
             # Mostrar los datos cargados
-            st.write("Datos adicionales cargados:")
+            st.write("Datos cargados:")
             st.write(df_datos_adicionales)
 
     elif opcion == "Elegir recetas":
