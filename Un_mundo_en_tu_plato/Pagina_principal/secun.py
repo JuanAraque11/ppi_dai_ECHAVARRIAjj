@@ -68,8 +68,8 @@ def main():
             st.write(df_datos_adicionales)
 
     elif opcion == "Elegir recetas":
-        st.title("Elegir recetas")
         funciones.elegir_receta()
+        
     elif opcion == "Distribuciones":
         st.write("")
         # funciones.visualizar_distribucion_recetas(funciones.recetas)
