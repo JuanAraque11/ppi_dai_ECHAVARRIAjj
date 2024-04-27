@@ -1,7 +1,7 @@
 import pickle
 from pathlib import Path
 
-import streamlit_authenticator as stauth
+# import streamlit_authenticator as stauth
 
 names = ["Peter Parker", "Rebecca Miller"]
 usernames = ["pparker", "rmiller"]
