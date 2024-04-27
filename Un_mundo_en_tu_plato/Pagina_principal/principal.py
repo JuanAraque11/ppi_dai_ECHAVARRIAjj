@@ -64,9 +64,10 @@ def main():
             st.markdown("[Ir al enlace](https://unmundoentuplato-funciones.streamlit.app/)")
             st.write("La sesion pertenece a ", en_sesion.get_username())
         """
+        
     elif opcion == "Actualizar contraseña":
-
         register.change_password()
+
     elif opcion == "Buscar recetas":
         # Interfaz de usuario
         st.title("Buscar recetas por ingredientes")
