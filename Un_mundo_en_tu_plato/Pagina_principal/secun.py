@@ -69,6 +69,8 @@ def main():
 
     elif opcion == "Elegir recetas":
         st.title("Elegir recetas")
+        funciones.elegir_receta()
+        """"
         seleccion_tipo = st.text_input("Introduce el tipo de receta:")
         st.write("Los tipos de receta son: Acompañamiento, Cena, Cumpleaños, Desayuno, Entrante, Merienda, Plato principal y Postre.")
         seleccion_difi = st.text_input("Introduce la dificultad de la receta:")
@@ -82,7 +84,7 @@ def main():
                 st.write("No se encontraron recetas.")
             else:
                 st.write("Recetas encontradas:")
-                st.write(encuentra[['Nombre', 'Tipo', 'Ingredientes', 'Dificultad','Link_receta']])
+                st.write(encuentra[['Nombre', 'Tipo', 'Ingredientes', 'Dificultad','Link_receta']]) """
             #funciones.mostrar_grafico_popularidad(funciones.platos, funciones.popularidad)
 
     elif opcion == "Distribuciones":
