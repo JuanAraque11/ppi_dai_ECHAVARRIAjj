@@ -68,7 +68,7 @@ def buscar_por_valoracion(valoracion, opcion):
     return recetas_filtradas
 
 
-def elegir_recetaa(tipo, difi):
+def elegir_receta(tipo, difi):
 
     reemplazar_nulos()
     recetas = data[(data['Tipo'] == tipo) & (data['Dificultad'] == difi)]

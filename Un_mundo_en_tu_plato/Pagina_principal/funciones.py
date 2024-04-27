@@ -98,20 +98,3 @@ def calcular_ingredientes(plato, num_personas):
     cantidad_por_porcion = np.array(list(ingredientes.values()))
     cantidad_total = cantidad_por_porcion * num_personas
     return dict(zip(ingredientes.keys(), cantidad_total))
-
-
-def elegir_receta():
-
-    reemplazar_nulos()
-
-    st.title("Elegir recetas")
-    seleccion_tipo = st.selectbox("Selecciona el tipo de receta:", ['Acompañamiento','Cena', 'Cumpleaños', 'Desayuno', 'Entrante', 'Merienda', 'Plato principal', 'Postre'])
-    seleccion_difi = st.selectbox("Selecciona la dificultad de la receta:", ['muy bajo', 'bajo', 'medio', 'alto', 'muy alto'])
-
-    if st.button("Buscar"):
-        recetas = data[(data['Tipo'] == seleccion_tipo) & (data['Dificultad'] == seleccion_difi)]
-        if recetas.empty:
-            st.write("No se encontraron recetas.")
-        else:
-            st.write("Recetas encontradas:")
-            st.write(recetas[['Nombre', 'Tipo', 'Ingredientes', 'Dificultad','Link_receta']])
