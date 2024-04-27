@@ -1,10 +1,10 @@
 import streamlit as st
 import info
-import login2
+import login
 import secun
 import recetas
 import register
-import streamlit_authenticator as stauth
+# import streamlit_authenticator as stauth
 
 # Menú desplegable para elegir entre iniciar sesión y registrar usuario
 opcion = st.sidebar.selectbox("Menú:", ["Inicio", "Registrarse", "Actualizar contraseña", "Buscar recetas", "Receta al azar", "Buscar por valoración","Información y contacto"])
@@ -22,10 +22,6 @@ def main():
     # estado_politi = info.mostrar_ventana_emergente()
 
     # if estado_politi:
-
-    names = ["Peter Parker", "Rebecca Miller"]
-    usernames = ["pparker", "rmiller"]
-    passwords = ["abc123", "def456"]
 
     if opcion == "Información y contacto":
         info.info1()
@@ -53,8 +49,6 @@ def main():
         if authentication_status:
             secun.mostrar_pagina2()
         """
-
-        """
         estado, en_sesion = login.login_user()
         if not estado:
             st.info("Por favor, inicie sesión.")
@@ -63,7 +57,7 @@ def main():
             # Redirigir al usuario a un enlace externo después de iniciar sesión
             st.markdown("[Ir al enlace](https://unmundoentuplato-funciones.streamlit.app/)")
             st.write("La sesion pertenece a ", en_sesion.get_username())
-        """
+
 
     elif opcion == "Actualizar contraseña":
         register.change_password()
