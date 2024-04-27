@@ -68,18 +68,9 @@ def buscar_por_valoracion(valoracion, opcion):
     return recetas_filtradas
 
 
-def elegir_recetaa():
+def elegir_recetaa(tipo, difi):
 
     reemplazar_nulos()
-
-    st.title("Elegir recetas")
-    seleccion_tipo = st.selectbox("Selecciona el tipo de receta:", ['Acompañamiento','Cena', 'Cumpleaños', 'Desayuno', 'Entrante', 'Merienda', 'Plato principal', 'Postre'])
-    seleccion_difi = st.selectbox("Selecciona la dificultad de la receta:", ['muy bajo', 'bajo', 'medio', 'alto', 'muy alto'])
-
-    if st.button("Buscar"):
-        recetas = data[(data['Tipo'] == seleccion_tipo) & (data['Dificultad'] == seleccion_difi)]
-        if recetas.empty:
-            st.write("No se encontraron recetas.")
-        else:
-            st.write("Recetas encontradas:")
-            st.write(recetas[['Nombre', 'Tipo', 'Ingredientes', 'Dificultad','Link_receta']])
+    recetas = data[(data['Tipo'] == tipo) & (data['Dificultad'] == difi)]
+    
+    return recetas
