@@ -1,7 +1,6 @@
 import streamlit as st
 import info
 import login
-import secun
 import recetas
 import register
 # import streamlit_authenticator as stauth

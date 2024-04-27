@@ -8,11 +8,11 @@ import pandas as pd
 opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga recetas", "Elegir recetas", "Distribuciones"])
 
 def main():
-    # Título de la página
-    st.title("Contenido")
     
     # Mostrar contenido según la opción seleccionada
     if opcion == "Información":
+        # Título de la página
+        st.title("Contenido")
         funciones.mostrar_inicio()
     elif opcion == "Guardar Recetas":
         st.write("En proceso...")
