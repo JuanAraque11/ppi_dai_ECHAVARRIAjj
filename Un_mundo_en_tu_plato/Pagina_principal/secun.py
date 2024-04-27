@@ -4,13 +4,13 @@ import pandas as pd
 #import scipy.stats as stats
 #import matplotlib.pyplot as plt
 
-def mostrar_pagina2():
+# Menú de opciones desplegables
+opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga recetas", "Elegir recetas", "Distribuciones"])
+
+def main():
     # Título de la página
     st.title("Contenido")
-
-    # Menú de opciones desplegables
-    opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga recetas", "Elegir recetas", "Distribuciones"])
-
+    
     # Mostrar contenido según la opción seleccionada
     if opcion == "Información":
         funciones.mostrar_inicio()
@@ -74,3 +74,7 @@ def mostrar_pagina2():
     elif opcion == "Distribuciones":
         st.write("")
         # funciones.visualizar_distribucion_recetas(funciones.recetas)
+
+
+if __name__ == "__main__":
+    main()
