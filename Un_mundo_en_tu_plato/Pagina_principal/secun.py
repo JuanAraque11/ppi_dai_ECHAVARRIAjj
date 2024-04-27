@@ -9,7 +9,7 @@ def mostrar_pagina2():
     st.title("Contenido")
 
     # Menú de opciones desplegables
-    opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga tus recetas", "Elegir recetas", "Distribuciones"])
+    opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga recetas", "Elegir recetas", "Distribuciones"])
 
     # Mostrar contenido según la opción seleccionada
     if opcion == "Información":
