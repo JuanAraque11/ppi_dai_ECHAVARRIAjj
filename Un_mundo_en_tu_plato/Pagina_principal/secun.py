@@ -69,8 +69,10 @@ def main():
 
     elif opcion == "Elegir recetas":
         st.title("Elegir recetas")
-        seleccion_tipo = st.selectbox("Selecciona el tipo de receta:", ['Acompañamiento', 'Cena', 'Cumpleaños', 'Desayuno', 'Entrante', 'Merienda', 'Plato principal', 'Postre'])
-        seleccion_difi = st.selectbox("Selecciona la dificultad de la receta:", ['muy bajo', 'bajo', 'medio', 'alto', 'muy alto'])
+        seleccion_tipo = st.text_input("Tipo")
+        seleccion_difi = st.text_input("Difi")
+        #seleccion_tipo = st.selectbox("Selecciona el tipo de receta:", ['Acompañamiento', 'Cena', 'Cumpleaños', 'Desayuno', 'Entrante', 'Merienda', 'Plato principal', 'Postre'])
+        #seleccion_difi = st.selectbox("Selecciona la dificultad de la receta:", ['muy bajo', 'bajo', 'medio', 'alto', 'muy alto'])
 
         if st.button("Buscar"):
             encuentra = recetas.elegir_recetaa(seleccion_tipo, seleccion_difi)
