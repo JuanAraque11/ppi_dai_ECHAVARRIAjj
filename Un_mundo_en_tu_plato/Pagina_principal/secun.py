@@ -69,16 +69,17 @@ def main():
 
     elif opcion == "Elegir recetas":
         st.title("Elegir recetas")
-        seleccion_tipo = st.selectbox("Selecciona el tipo de receta:", ['Acompañamiento','Cena', 'Cumpleaños', 'Desayuno', 'Entrante', 'Merienda', 'Plato principal', 'Postre'])
+        seleccion_tipo = st.selectbox("Selecciona el tipo de receta:", ['Acompañamiento', 'Cena', 'Cumpleaños', 'Desayuno', 'Entrante', 'Merienda', 'Plato principal', 'Postre'])
         seleccion_difi = st.selectbox("Selecciona la dificultad de la receta:", ['muy bajo', 'bajo', 'medio', 'alto', 'muy alto'])
 
         if st.button("Buscar"):
             encuentra = recetas.elegir_recetaa(seleccion_tipo, seleccion_difi)
-            if encuentra.empty:
+            st.write(encuentra)
+            """if encuentra.empty:
                 st.write("No se encontraron recetas.")
             else:
                 st.write("Recetas encontradas:")
-                st.write(recetas[['Nombre', 'Tipo', 'Ingredientes', 'Dificultad','Link_receta']])
+                st.write(recetas[['Nombre', 'Tipo', 'Ingredientes', 'Dificultad','Link_receta']])"""
             #funciones.mostrar_grafico_popularidad(funciones.platos, funciones.popularidad)
 
     elif opcion == "Distribuciones":
