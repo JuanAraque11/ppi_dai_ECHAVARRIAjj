@@ -23,6 +23,10 @@ def main():
 
     # if estado_politi:
 
+    names = ["Peter Parker", "Rebecca Miller"]
+    usernames = ["pparker", "rmiller"]
+    passwords = ["abc123", "def456"]
+
     if opcion == "Información y contacto":
         info.info1()
 
@@ -35,7 +39,7 @@ def main():
 
         info.info2()
 
-        authenticator = stauth.Authenticate(login2.names, login2.usernames, login2.passwords,
+        authenticator = stauth.Authenticate(names, usernames, passwords,
         "sales_dashboard", "abcdef", cookie_expiry_days=30)
 
         name, authentication_status, username = authenticator.login("Login", "main")
