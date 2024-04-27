@@ -6,7 +6,7 @@ import recetas
 #import matplotlib.pyplot as plt
 
 # Menú de opciones desplegables
-opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga recetas", "Elegir recetas", "Distribuciones"])
+opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga tus recetas", "Elegir recetas", "Distribuciones"])
 
 def main():
     
@@ -69,7 +69,7 @@ def main():
 
     elif opcion == "Elegir recetas":
         funciones.elegir_receta()
-        
+
     elif opcion == "Distribuciones":
         st.write("")
         # funciones.visualizar_distribucion_recetas(funciones.recetas)
