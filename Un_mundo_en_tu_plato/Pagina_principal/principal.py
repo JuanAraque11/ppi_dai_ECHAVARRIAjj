@@ -34,21 +34,7 @@ def main():
     elif opcion == "Inicio":
 
         info.info2()
-        '''
-        authenticator = stauth.Authenticate(names, usernames, passwords,
-        "sales_dashboard", "abcdef", cookie_expiry_days=30)
 
-        name, authentication_status, username = authenticator.login("Login", "main")
-
-        if authentication_status == False:
-            st.error("Username/password is incorrect")
-
-        if authentication_status == None:
-            st.warning("Please enter your username and password")
-
-        if authentication_status:
-            secun.mostrar_pagina2()
-        '''
         estado, en_sesion = login.login_user()
         if not estado:
             st.info("Por favor, inicie sesión.")
