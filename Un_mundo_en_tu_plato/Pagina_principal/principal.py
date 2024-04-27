@@ -38,7 +38,7 @@ def main():
     elif opcion == "Inicio":
 
         info.info2()
-
+        """
         authenticator = stauth.Authenticate(names, usernames, passwords,
         "sales_dashboard", "abcdef", cookie_expiry_days=30)
 
@@ -52,6 +52,7 @@ def main():
 
         if authentication_status:
             secun.mostrar_pagina2()
+        """
 
         """
         estado, en_sesion = login.login_user()
