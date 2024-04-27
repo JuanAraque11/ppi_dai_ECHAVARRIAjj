@@ -80,7 +80,7 @@ def main():
                 st.write("No se encontraron recetas.")
             else:
                 st.write("Recetas encontradas:")
-                st.write(recetas[['Nombre', 'Tipo', 'Ingredientes', 'Dificultad','Link_receta']])
+                st.write(encuentra[['Nombre', 'Tipo', 'Ingredientes', 'Dificultad','Link_receta']])
             #funciones.mostrar_grafico_popularidad(funciones.platos, funciones.popularidad)
 
     elif opcion == "Distribuciones":
