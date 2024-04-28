@@ -5,8 +5,6 @@ import recetas
 import register
 # import streamlit_authenticator as stauth
 
-# Menú desplegable para elegir entre iniciar sesión y registrar usuario
-opcion = st.sidebar.selectbox("Menú:", ["Inicio", "Registrarse", "Actualizar contraseña", "Buscar recetas", "Receta al azar", "Buscar por valoración","Información y contacto"])
 
 # Función principal
 def main():
@@ -17,6 +15,9 @@ def main():
 
     Returns: None
     """
+    # Menú desplegable para elegir entre iniciar sesión y registrar usuario
+    opcion = st.sidebar.selectbox("Menú:", ["Inicio", "Registrarse", "Actualizar contraseña", "Buscar recetas", "Receta al azar", "Buscar por valoración","Información y contacto"])
+
 
     # estado_politi = info.mostrar_ventana_emergente()
 
