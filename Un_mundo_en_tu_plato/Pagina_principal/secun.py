@@ -6,9 +6,20 @@ import recetas
 #import matplotlib.pyplot as plt
 
 # Menú de opciones desplegables
-opcion = st.sidebar.selectbox("Selecciona una opción:", ["Información", "Guardar Recetas", "Consultar Información de los Platos", "Estadísticas de recetas", "Carga tus recetas", "Elegir recetas", "Distribuciones"])
+opcion = st.sidebar.selectbox("Selecciona una opción:",
+                              ["Información", "Guardar Recetas",
+                               "Consultar Información de los Platos",
+                               "Estadísticas de recetas", "Carga tus recetas",
+                               "Elegir recetas", "Distribuciones"])
 
 def main():
+    """
+    Función principal del programa secundario.
+
+    Args: None
+
+    Returns: None
+    """
     
     # Mostrar contenido según la opción seleccionada
     if opcion == "Información":
