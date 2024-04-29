@@ -2,6 +2,16 @@ import streamlit as st
 
 registered_users = {}
 
+def mostrar_usuarios():
+    """
+    Mostrar los usuarios registrados
+
+    Args: None
+
+    Returns: None
+    """
+    st.write(registered_users)
+
 
 def register_user():
     """
