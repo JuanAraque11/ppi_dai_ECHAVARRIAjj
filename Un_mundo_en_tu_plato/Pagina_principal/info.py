@@ -92,13 +92,15 @@ def info2():
     ''')
 
 
-def mostrar_ventana_emergente():
+def terminos_condiciones():
     """ Botón para abrir la ventana emergente para política
     
     Args: None
 
-    Returns: 
+    Returns: None
     """
+    st.title("Términos y Condiciones")
+
     st.write('''
     Política de tratamiento de datos personales para los usuarios de Un\
     mundo en tu plato.
@@ -173,16 +175,3 @@ def mostrar_ventana_emergente():
     # Pie de página
     st.write("© 2024. Todos los derechos reservados.")
 
-    # Botones para aceptar o denegar
-    aceptar = st.button("Aceptar")
-    denegar = st.button("Denegar")
-
-    # Acciones al clickear los botones
-    if aceptar:
-        st.write("Has aceptado el mensaje. Puedes continuar utilizando la app.")
-        return True
-    elif denegar:
-        st.write("Has denegado el mensaje. No podrás utilizar la app.")
-        return False
-    else:
-        return False
