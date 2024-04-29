@@ -15,8 +15,8 @@ def mostrar_inicio():
     """
     st.write("Bienvenido al Inicio")
     st.write("Aquí encontrarás información sobre las funciones de la página:")
-    st.write("- Guardar Recetas: Permite a los usuarios guardar nuevas recetas\
-    en la base de datos.")
+    st.write("- Guardar Recetas: Permitirá a los usuarios guardar nuevas\
+              recetas en su cuenta.")
     st.write("- Consultar Información de los Platos: Proporciona información\
     detallada sobre los platos disponibles.")
     st.write("- Ver Distribuciones Estadísticas: Muestra distribuciones\
@@ -94,6 +94,13 @@ datos_recetas = {
 }
 
 def calcular_ingredientes(plato, num_personas):
+    """Calcula la cantidad de ingredientes requeridos para una receta.
+
+    Args: plato (str): El nombre de la receta.
+          num_personas (int): El número de personas que prepararán la receta.
+
+    Returns: dict: Un diccionario con los ingredientes requeridos.
+    """
     ingredientes = recetas.get(plato, {})
     cantidad_por_porcion = np.array(list(ingredientes.values()))
     cantidad_total = cantidad_por_porcion * num_personas
@@ -101,6 +108,13 @@ def calcular_ingredientes(plato, num_personas):
 
 
 def elegir_receta():
+    """ 
+    Muestra una interfaz de usuario para elegir una receta.
+
+    Args: None
+
+    Returns: None
+    """
 
     reemplazar_nulos()
 
