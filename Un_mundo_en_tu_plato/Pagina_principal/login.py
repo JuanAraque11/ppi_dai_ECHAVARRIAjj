@@ -23,8 +23,3 @@ def login_user():
         else:
             st.error("Usuario no registrado")
     return False, None
-
-
-def crear_usuario(userna, passwo):
-    user = Usuario(userna, passwo)
-    return user
