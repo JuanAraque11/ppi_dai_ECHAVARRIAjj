@@ -63,6 +63,13 @@ def info1():
 
 
 def info2():
+    """
+    muestra informacion importante sobre la app
+
+    Args: None
+    
+    Returns: None
+    """
     
     # Título y autor
     st.title("Un mundo en tu plato")
@@ -93,7 +100,8 @@ def info2():
 
 
 def terminos_condiciones():
-    """ Botón para abrir la ventana emergente para política
+    """ 
+    Botón para abrir la ventana emergente para política
     
     Args: None
 
@@ -174,4 +182,3 @@ def terminos_condiciones():
 
     # Pie de página
     st.write("© 2024. Todos los derechos reservados.")
-
