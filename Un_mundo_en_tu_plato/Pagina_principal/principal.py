@@ -64,8 +64,7 @@ def main():
             ingrediente_busqueda = st.text_input("Ingrese un ingrediente:")
             buscar_button = st.button("Buscar recetas")
             if buscar_button:
-                recetas_encontradas = recetas.buscar_receta_por_ingrediente
-                (ingrediente_busqueda)
+                recetas_encontradas = recetas.buscar_receta_por_ingrediente(ingrediente_busqueda)
                 if recetas_encontradas.empty:
                     st.write("No se encontraron recetas con ese ingrediente.")
                 else:
