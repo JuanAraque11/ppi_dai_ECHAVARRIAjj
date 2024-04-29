@@ -41,14 +41,13 @@ def main():
 
             info.info2()
 
-            estado, en_sesion = login.login_user()
+            estado = login.login_user()
             if not estado:
                 st.info("Por favor, inicie sesión.")
             else:
                 
                 # Redirigir al usuario a un enlace externo después de iniciar sesión
                 st.markdown("[Ir al enlace](https://unmundoentuplato-funciones.streamlit.app/)")
-                st.write("La sesion pertenece a ", en_sesion.get_username())
 
 
         elif opcion == "Actualizar contraseña":

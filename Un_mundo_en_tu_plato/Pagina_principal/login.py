@@ -15,11 +15,10 @@ def login_user():
     if st.button("Iniciar sesión"):
         if username in registered_users:
             if registered_users[username] == password:
-                st.success("Inicio de sesión exitoso. ¡Bienvenido, {}!".format(username))  
-                actual = crear_usuario(username, password)  
-                return True, actual
+                st.success("Inicio de sesión exitoso. ¡Bienvenido, {}!".format(username))    
+                return True
             else:
                 st.error("Contraseña incorrecta")
         else:
             st.error("Usuario no registrado")
-    return False, None
+    return False
