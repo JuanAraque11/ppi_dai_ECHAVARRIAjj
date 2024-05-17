@@ -16,6 +16,8 @@ def main():
     Returns: None
     """
 
+    aceptado = False
+
     # Inicializar el estado si no existe
     if 'visible' not in st.session_state:
         st.session_state.visible = False
