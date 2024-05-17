@@ -40,7 +40,7 @@ def main():
             st.session_state.visible = False
             st.experimental_rerun()
     else:
-        st.session_state.aceptado = False
+        pass
 
     if st.session_state.aceptado:
 
