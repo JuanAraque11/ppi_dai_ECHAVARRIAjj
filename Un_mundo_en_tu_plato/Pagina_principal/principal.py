@@ -38,7 +38,7 @@ def main():
 
     # Ocultar "Hola" si aceptado es True
     if st.session_state.aceptado:
-        st.session_state.visible = False
+        st.session_state.visible = not st.session_state.visible
     
 
     if st.session_state.aceptado:
