@@ -6,7 +6,7 @@ import register
 
 # import geopandas as gpd
 # import matplotlib.pyplot as plt
-from scipy import stats
+# from scipy import stats
 # import streamlit_authenticator as stauth
 
 
