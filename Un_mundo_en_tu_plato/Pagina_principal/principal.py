@@ -43,7 +43,7 @@ def main():
         st.session_state.visible = False
     
 
-    if aceptado:
+    if st.session_state.aceptado:
 
         # Menú desplegable para elegir entre iniciar sesión y registrar usuario
         opcion = st.sidebar.selectbox("Menú:", ["Inicio", "Registrarse", 
