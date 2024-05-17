@@ -16,7 +16,7 @@ def main():
     Returns: None
     """
 
-    visible = True
+    visible = False
 
     # Verificar si el usuario acepta los términos y condiciones
     ver_terminos = st.button("Ver Términos y Condiciones")
