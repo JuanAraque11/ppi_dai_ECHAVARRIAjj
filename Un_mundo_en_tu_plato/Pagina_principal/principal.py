@@ -15,30 +15,6 @@ def main():
 
     Returns: None
     """
-
-    """
-    # Inicializar el estado si no existe
-    if 'visible' not in st.session_state:
-        st.session_state.visible = False
-
-    if 'aceptado' not in st.session_state:
-        st.session_state.aceptado = False
-
-    # Verificar que el usuario vea los términos y condiciones
-    ver_terminos = st.button("Ver Términos y Condiciones")
-
-    # Actualización de la variable "visible" según el estado del botón
-    if ver_terminos:
-        st.session_state.visible = not st.session_state.visible
-
-    # Mostrar "Hola" solo si la variable "visible" es True
-    if st.session_state.visible:
-        info.terminos_condiciones()
-        st.session_state.aceptado = st.checkbox("Acepto", value=st.session_state.aceptado)
-
-    # Ocultar "Hola" si aceptado es True
-    if st.session_state.aceptado:
-        st.session_state.visible = False """
     
     # Inicializar el estado si no existe
     if 'visible' not in st.session_state:
