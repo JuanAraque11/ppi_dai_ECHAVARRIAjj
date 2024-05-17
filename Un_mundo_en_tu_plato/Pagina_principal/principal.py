@@ -34,9 +34,6 @@ def main():
         info.terminos_condiciones()
         aceptado = st.checkbox("Acepto los Términos y Condiciones")
     
-    if aceptado:
-        # Ocultar los terminos y condiciones una ves aceptados
-        st.session_state.visible = not st.session_state.visible
 
     if aceptado:
 
