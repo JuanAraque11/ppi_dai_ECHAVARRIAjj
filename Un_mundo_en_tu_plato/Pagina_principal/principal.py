@@ -3,7 +3,10 @@ import info
 import login
 import recetas
 import register
-import matplotlib.pyplot as plt
+
+import geopandas as gpd
+
+# import matplotlib.pyplot as plt
 
 # import streamlit_authenticator as stauth
 
