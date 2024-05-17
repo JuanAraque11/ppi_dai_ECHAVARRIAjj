@@ -30,8 +30,7 @@ def main():
     # Mostrar "Hola" solo si la variable "visible" es True
     if st.session_state.visible:
         info.terminos_condiciones()
-
-    aceptado = st.checkbox("Acepto los Términos y Condiciones")
+        aceptado = st.checkbox("Acepto los Términos y Condiciones")
     
 
     if aceptado:
