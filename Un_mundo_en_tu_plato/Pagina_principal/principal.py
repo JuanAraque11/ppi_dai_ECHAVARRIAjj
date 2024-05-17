@@ -33,15 +33,15 @@ def main():
     # Mostrar "Hola" solo si la variable "visible" es True
     if st.session_state.visible:
         info.terminos_condiciones()
-        # aceptado = st.checkbox("Acepto los Términos y Condiciones")
-        st.session_state.aceptado = st.checkbox("Acepto los Términos y Condiciones", value=st.session_state.aceptado)
+        aceptado = st.checkbox("Acepto los Términos y Condiciones")
+        st.session_state.aceptado = st.checkbox("Acepto", value=st.session_state.aceptado)
 
     # Ocultar "Hola" si aceptado es True
     if st.session_state.aceptado:
-        st.session_state.visible = not st.session_state.visible
+        st.session_state.visible = False
     
 
-    if st.session_state.aceptado:
+    if aceptado:
 
         # Menú desplegable para elegir entre iniciar sesión y registrar usuario
         opcion = st.sidebar.selectbox("Menú:", ["Inicio", "Registrarse", 
