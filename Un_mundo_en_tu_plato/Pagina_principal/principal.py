@@ -30,7 +30,7 @@ def main():
     if ver_terminos:
         st.session_state.visible = not st.session_state.visible
 
-    # Mostrar "Hola" solo si la variable "visible" es True
+    # Mostrar términos y condiciones solo si la variable "visible" es True
     if st.session_state.visible and not st.session_state.aceptado:
         info.terminos_condiciones()
         aceptado = st.checkbox("Acepto los términos y condiciones")
@@ -39,8 +39,7 @@ def main():
             st.session_state.aceptado = True
             st.session_state.visible = False
             st.experimental_rerun()
-    else:
-        pass
+
 
     if st.session_state.aceptado:
 
