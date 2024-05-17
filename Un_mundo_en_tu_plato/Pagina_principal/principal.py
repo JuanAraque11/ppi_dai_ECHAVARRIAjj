@@ -4,7 +4,7 @@ import login
 import recetas
 import register
 
-# import geopandas as gpd
+import geopandas as gpd
 # import matplotlib.pyplot as plt
 # from scipy import stats
 # import streamlit_authenticator as stauth
