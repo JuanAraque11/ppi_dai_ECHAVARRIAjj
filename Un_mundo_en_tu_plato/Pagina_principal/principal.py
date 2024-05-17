@@ -16,9 +16,21 @@ def main():
     Returns: None
     """
 
-    info.terminos_condiciones()
+    visible = True
+
     # Verificar si el usuario acepta los términos y condiciones
+    ver_terminos = st.button("Ver Términos y Condiciones")
+
+    # Actualización de la variable "visible" según el estado del botón
+    if ver_terminos:
+        visible = not visible
+
+    # Mostrar "Hola" solo si la variable "visible" es True
+    if visible:
+        info.terminos_condiciones()
+
     aceptado = st.checkbox("Acepto los Términos y Condiciones")
+    
 
     if aceptado:
         # Menú desplegable para elegir entre iniciar sesión y registrar usuario
