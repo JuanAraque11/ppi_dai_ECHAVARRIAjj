@@ -43,7 +43,7 @@ def main():
                 st.write(f"- {ingrediente}: {cantidad} gramos")
     elif opcion == "Estadísticas de recetas":
         st.write("Aqui puedes ver las estadísticas de tus recetas existentes en la app.")
-        estadisticas.distri_categorias
+        estadisticas.distri_categorias()
         
 
     elif opcion == "Carga tus recetas":
