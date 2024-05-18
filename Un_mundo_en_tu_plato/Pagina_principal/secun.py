@@ -2,8 +2,7 @@ import streamlit as st
 import funciones
 import pandas as pd
 import recetas
-#import scipy.stats as stats
-#import matplotlib.pyplot as plt
+import estadisticas 
 
 # Menú de opciones desplegables
 opcion = st.sidebar.selectbox("Selecciona una opción:",
@@ -43,23 +42,9 @@ def main():
             for ingrediente, cantidad in cantidad_ingredientes.items():
                 st.write(f"- {ingrediente}: {cantidad} gramos")
     elif opcion == "Estadísticas de recetas":
-        st.write("")
-        # Crear DataFrame de Pandas con los datos de las recetas
-        """df_recetas = pd.DataFrame(funciones.datos_recetas)
-
-        # Calcular estadísticas descriptivas
-        descripcion_calorias = stats.describe(df_recetas["Calorías"])
-        descripcion_grasas = stats.describe(df_recetas["Grasas (g)"])
-        descripcion_proteinas = stats.describe(df_recetas["Proteínas (g)"])
-
-        # Mostrar estadísticas descriptivas
-        st.title("Análisis de Ingredientes Nutricionales")
-        st.write("Estadísticas de Calorías:")
-        st.write(descripcion_calorias)
-        st.write("Estadísticas de Grasas:")
-        st.write(descripcion_grasas)
-        st.write("Estadísticas de Proteínas:")
-        st.write(descripcion_proteinas) """
+        st.write("Aqui puedes ver las estadísticas de tus recetas existentes en la app.")
+        estadisticas.distri_categorias
+        
 
     elif opcion == "Carga tus recetas":
         
