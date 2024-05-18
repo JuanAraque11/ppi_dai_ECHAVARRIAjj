@@ -7,6 +7,21 @@ ruta = "https://raw.githubusercontent.com/JuanAraque11/ppi_dai_ECHAVARRIAjj/main
 # Cargar el dataset a partir de la ruta establecida
 data = pd.read_csv(ruta, delimiter="|")
 
+def reemplazar_nulos():
+    """
+    Reemplaza los valores nulos de la base de datos.
+
+    Args: None
+
+    Returns: None 
+    """
+    data['Ingredientes'] = data['Ingredientes'].fillna('')
+    data['Valoracion'] = data['Valoracion'].fillna(0)
+    data['Dificultad'] = data['Dificultad'].fillna('media')
+    data['Tipo'] = data['Tipo'].fillna('Entrante')
+
+reemplazar_nulos()
+
 def mostrar_receta_aleatoria():
     """
     Muestra una receta al azar de la base de datos.
@@ -27,20 +42,6 @@ def mostrar_receta_aleatoria():
         st.write(f"Link de la Receta: {receta_aleatoria['Link_receta'].values[0]}")
 
 
-def reemplazar_nulos():
-    """
-    Reemplaza los valores nulos de la base de datos.
-
-    Args: None
-
-    Returns: None 
-    """
-    data['Ingredientes'] = data['Ingredientes'].fillna('')
-    data['Valoracion'] = data['Valoracion'].fillna(0)
-    data['Dificultad'] = data['Dificultad'].fillna('media')
-    data['Tipo'] = data['Tipo'].fillna('Entrante')
-
-
 def buscar_receta_por_ingrediente(ingrediente):  
     """
     Busca recetas por el ingrediente especificado.
@@ -49,7 +50,6 @@ def buscar_receta_por_ingrediente(ingrediente):
     
     Returns: None
     """
-    reemplazar_nulos()
 
     recetas_filtradas = data[data['Ingredientes'].str.contains(ingrediente)]
     recetas_filtradas
@@ -67,8 +67,6 @@ def buscar_por_valoracion(valoracion, opcion):
     Returns:
     - DataFrame: DataFrame con las recetas que cumplen con los criterios de búsqueda.
     """
-
-    reemplazar_nulos()
 
     # Filtrar recetas según la opción seleccionada
     if opcion == 'mayores':
