@@ -4,7 +4,7 @@ from scipy.spatial.distance import cdist
 import streamlit as st
 
 import geopandas as gpd
-# import plotly.express as px
+import plotly.express as px
 import plotly.graph_objs as go
 
 url = "https://raw.githubusercontent.com/JuanAraque11/ppi_dai_ECHAVARRIAjj/main/Un_mundo_en_tu_plato/Datos/restaurantes.csv"
