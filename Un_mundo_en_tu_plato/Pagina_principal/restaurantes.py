@@ -4,8 +4,7 @@ from scipy.spatial.distance import cdist
 
 import geopandas as gpd
 
-url = "https://raw.githubusercontent.com/JuanAraque11/ppi_dai_ECHAVARRIAjj/\
-main/Un_mundo_en_tu_plato/Datos/restaurantes.csv"
+url = "https://raw.githubusercontent.com/JuanAraque11/ppi_dai_ECHAVARRIAjj/main/Un_mundo_en_tu_plato/Datos/restaurantes.csv"
 
 # Cargar el dataset a partir de la ruta establecida
 datos = gpd.read_file(url)
