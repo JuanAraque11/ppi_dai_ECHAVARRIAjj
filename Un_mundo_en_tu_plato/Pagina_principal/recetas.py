@@ -19,6 +19,7 @@ def reemplazar_nulos():
     data['Valoracion'] = data['Valoracion'].fillna(0)
     data['Dificultad'] = data['Dificultad'].fillna('media')
     data['Tipo'] = data['Tipo'].fillna('Entrante')
+    data['Tiempo'] = data['Tiempo'].fillna('30m')
 
 reemplazar_nulos()
 
