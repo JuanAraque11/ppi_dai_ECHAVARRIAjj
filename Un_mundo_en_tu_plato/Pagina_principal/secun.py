@@ -47,6 +47,12 @@ def main():
         estadisticas.distri_categorias()
 
         estadisticas.distri_valoraciones()
+
+        estadisticas.valoracion_por_dificultad()
+
+        estadisticas.top_recetas_reviews()
+
+        estadisticas.top_recetas_comentadas()
         
 
     elif opcion == "Carga tus recetas":
