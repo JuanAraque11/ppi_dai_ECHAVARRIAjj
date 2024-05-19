@@ -20,7 +20,7 @@ datos['Restaurant Name'] = datos['Restaurant Name'].astype('string')
 datos['Address'] = datos['Address'].astype('string')
 
 # Eliminar las columnas de latitud y longitud con valores nulos
-datos = datos[(datos['longitude'] != 0) | (datos['latitude'] != 0)]
+datos = datos[(datos['Longitude'] != 0) | (datos['Latitude'] != 0)]
 
 
 NewDelhi = datos[datos['City'] == 'New Delhi']
