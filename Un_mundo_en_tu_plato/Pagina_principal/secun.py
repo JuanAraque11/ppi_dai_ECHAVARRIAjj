@@ -43,7 +43,7 @@ def main():
             for ingrediente, cantidad in cantidad_ingredientes.items():
                 st.write(f"- {ingrediente}: {cantidad} gramos")
     elif opcion == "Estadísticas de recetas":
-        st.title("Aqui puedes ver las estadísticas de tus recetas existentes en la app.")
+        st.title("Aqui puedes ver las estadísticas de las recetas existentes en la app.")
         
         estadisticas.distri_categorias()
 
