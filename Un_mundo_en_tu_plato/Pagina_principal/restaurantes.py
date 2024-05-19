@@ -24,7 +24,7 @@ datos = datos[(datos['Longitude'] != 0) | (datos['Latitude'] != 0)]
 
 NewDelhi = datos[(datos['City'] == 'New Delhi') & (datos['Longitude'] != 34.0)]
 Gurgaon = datos[datos['City'] == 'Gurgaon']
-Noida = datos[datos['City'] == 'Noida']
+Noida = datos[(datos['City'] == 'Noida') & (datos['Longitude'] != 0.0)]
 Faridabad = datos[datos['City'] == 'Faridabad']
 Ghaziabad = datos[datos['City'] == 'Ghaziabad']
 
