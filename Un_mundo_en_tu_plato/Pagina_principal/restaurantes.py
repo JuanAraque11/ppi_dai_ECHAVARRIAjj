@@ -17,7 +17,7 @@ datos['Price range'] = pd.to_numeric(datos['Price range'])
 datos['Aggregate rating'] = pd.to_numeric(datos['Aggregate rating'])
 datos['Votes'] = pd.to_numeric(datos['Votes'])
 
-hallar_restaurantes = datos[datos['City'] == 'New Delhi']
+NewDelhi = datos[datos['City'] == 'New Delhi']
 
 
 def elegir_restaurantes():
@@ -31,7 +31,7 @@ def elegir_restaurantes():
 
     st.title("Elegir ciudad para ver restaurantes.")
     seleccion_ciudad = st.selectbox("Selecciona la ciudad:", ['New Delhi','Gurgaon', 'Noida', 'Faridabad', 'Ghaziabad '])
-    st.write(hallar_restaurantes.head(2))
+    st.write(NewDelhi.head(2))
     if st.button("Buscar"):
         hallar_restaurantes = datos[datos['City'] == seleccion_ciudad]
         if hallar_restaurantes.empty:
