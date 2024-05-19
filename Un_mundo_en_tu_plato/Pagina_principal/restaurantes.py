@@ -20,6 +20,10 @@ datos['Restaurant Name'] = datos['Restaurant Name'].astype('string')
 datos['Address'] = datos['Address'].astype('string')
 
 NewDelhi = datos[datos['City'] == 'New Delhi']
+Gurgaon = datos[datos['City'] == 'Gurgaon']
+Noida = datos[datos['City'] == 'Noida']
+Faridabad = datos[datos['City'] == 'Faridabad']
+Ghaziabad = datos[datos['City'] == 'Ghaziabad']
 
 
 def elegir_restaurantes():
@@ -32,7 +36,7 @@ def elegir_restaurantes():
     """
 
     st.title("Elegir ciudad para ver restaurantes.")
-    seleccion_ciudad = st.selectbox("Selecciona la ciudad:", ['New Delhi','Gurgaon', 'Noida', 'Faridabad', 'Ghaziabad '])
+    seleccion_ciudad = st.selectbox("Selecciona la ciudad:", ['New Delhi','Gurgaon', 'Noida', 'Faridabad', 'Ghaziabad'])
     st.write(NewDelhi.head(2))
     st.write(NewDelhi[['Restaurant Name', 'City', 'Address', 'Votes']])
     if st.button("Buscar"):
