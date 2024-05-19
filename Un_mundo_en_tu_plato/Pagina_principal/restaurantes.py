@@ -43,6 +43,8 @@ def triangulacion(df):
 
     Returns: None
     """
+
+    st.write("Triangulación de Delaunay")
     points = df[['Longitude', 'Latitude']].to_numpy()
 
     # Aplicar la triangulación de Delaunay
@@ -67,6 +69,8 @@ def casco(df):
 
     Returns: None
     """
+
+    st.write("Casco Convexo")
     points = df[['Longitude', 'Latitude']].to_numpy()
     # Calcular el casco convexo
     casco = spt.ConvexHull(points)
@@ -117,22 +121,42 @@ def elegir_restaurantes():
             st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
             st.plotly_chart(mapa)
 
+            st.write(f"Otros datos estadisticos de {seleccion_ciudad}:")
+            triangulacion(NewDelhi)
+            casco(NewDelhi) 
+
         elif seleccion_ciudad == 'Gurgaon':
             mapa = graficar_mapa(Gurgaon)
             st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
             st.plotly_chart(mapa)
+            
+            st.write(f"Otros datos estadisticos de {seleccion_ciudad}")
+            triangulacion(Gurgaon)
+            casco(Gurgaon)
 
         elif seleccion_ciudad == 'Noida':
             mapa = graficar_mapa(Noida)
             st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
             st.plotly_chart(mapa)
 
+            st.write(f"Otros datos estadisticos de {seleccion_ciudad}")
+            triangulacion(Noida)
+            casco(Noida)
+
         elif seleccion_ciudad == 'Faridabad':
             mapa = graficar_mapa(Faridabad)
             st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
             st.plotly_chart(mapa)
 
+            st.write(f"Otros datos estadisticos de {seleccion_ciudad}")
+            triangulacion(Faridabad)
+            casco(Faridabad)
+
         elif seleccion_ciudad == 'Ghaziabad':
             mapa = graficar_mapa(Ghaziabad)
             st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
             st.plotly_chart(mapa)
+
+            st.write(f"Otros datos estadisticos de {seleccion_ciudad}:")
+            triangulacion(Ghaziabad)
+            casco(Ghaziabad)
