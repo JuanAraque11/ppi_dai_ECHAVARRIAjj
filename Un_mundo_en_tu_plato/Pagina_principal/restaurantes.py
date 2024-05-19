@@ -19,6 +19,10 @@ datos['Votes'] = pd.to_numeric(datos['Votes'])
 datos['Restaurant Name'] = datos['Restaurant Name'].astype('string')
 datos['Address'] = datos['Address'].astype('string')
 
+# Eliminar las columnas de latitud y longitud con valores nulos
+datos = datos[(datos['longitude'] != 0) | (datos['latitude'] != 0)]
+
+
 NewDelhi = datos[datos['City'] == 'New Delhi']
 Gurgaon = datos[datos['City'] == 'Gurgaon']
 Noida = datos[datos['City'] == 'Noida']
