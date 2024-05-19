@@ -110,6 +110,9 @@ def elegir_restaurantes():
 
     st.title("Elegir ciudad para ver restaurantes.")
     seleccion_ciudad = st.selectbox("Selecciona la ciudad:", ['New Delhi','Gurgaon', 'Noida', 'Faridabad', 'Ghaziabad'])
-    st.write(Ghaziabad[['Restaurant Name', 'City', 'Longitude', 'Latitude']])
+    
     if st.button("Buscar"):
-        hallar_restaurantes = datos[datos['City'] == seleccion_ciudad]
+        if seleccion_ciudad == 'New Delhi':
+            mapa = graficar_mapa(NewDelhi)
+            st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
+            st.plotly_chart(mapa)
