@@ -31,8 +31,8 @@ def elegir_restaurantes():
 
     st.title("Elegir ciudad para ver restaurantes.")
     seleccion_ciudad = st.selectbox("Selecciona la ciudad:", ['New Delhi','Gurgaon', 'Noida', 'Faridabad', 'Ghaziabad '])
-    st.write(NewDelhi.head(2))
-    #st.write(NewDelhi[['Restaurant Name', 'City', 'Adress', 'Votes']])
+    #st.write(NewDelhi.head(2))
+    st.write(NewDelhi[['Restaurant Name', 'City', 'Address', 'Votes']])
     if st.button("Buscar"):
         hallar_restaurantes = datos[datos['City'] == seleccion_ciudad]
         if hallar_restaurantes.empty:
