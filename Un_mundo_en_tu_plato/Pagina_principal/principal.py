@@ -14,11 +14,7 @@ def main():
     Returns: None
     """
     
-    # Titulo de la página
-    st.title("Un mundo en tu plato")
-
-    st.write("Debes aceptar los términos y condiciones antes de usar la página.")
-
+    
     # Inicializar el estado si no existe
     if 'visible' not in st.session_state:
         st.session_state.visible = False
