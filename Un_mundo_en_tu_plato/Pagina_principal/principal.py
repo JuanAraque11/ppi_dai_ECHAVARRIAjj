@@ -4,11 +4,6 @@ import login
 import recetas
 import register
 
-# import matplotlib.pyplot as plt
-# from scipy import stats
-# import streamlit_authenticator as stauth
-
-
 # Función principal
 def main():
     """
