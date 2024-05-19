@@ -16,6 +16,7 @@ datos['Longitude'] = pd.to_numeric(datos['Longitude'])
 datos['Price range'] = pd.to_numeric(datos['Price range'])
 datos['Aggregate rating'] = pd.to_numeric(datos['Aggregate rating'])
 datos['Votes'] = pd.to_numeric(datos['Votes'])
+datos['Restaurant Name'] = datos['Restaurant Name'].astype('string')
 
 NewDelhi = datos[datos['City'] == 'New Delhi']
 
