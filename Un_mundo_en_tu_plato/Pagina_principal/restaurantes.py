@@ -116,3 +116,23 @@ def elegir_restaurantes():
             mapa = graficar_mapa(NewDelhi)
             st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
             st.plotly_chart(mapa)
+
+        elif seleccion_ciudad == 'Gurgaon':
+            mapa = graficar_mapa(Gurgaon)
+            st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
+            st.plotly_chart(mapa)
+
+        elif seleccion_ciudad == 'Noida':
+            mapa = graficar_mapa(Noida)
+            st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
+            st.plotly_chart(mapa)
+
+        elif seleccion_ciudad == 'Faridabad':
+            mapa = graficar_mapa(Faridabad)
+            st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
+            st.plotly_chart(mapa)
+
+        elif seleccion_ciudad == 'Ghaziabad':
+            mapa = graficar_mapa(Ghaziabad)
+            st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
+            st.plotly_chart(mapa)
