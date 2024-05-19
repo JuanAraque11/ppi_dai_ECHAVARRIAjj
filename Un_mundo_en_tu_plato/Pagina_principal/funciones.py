@@ -144,6 +144,7 @@ def elegir_restaurantes():
     st.title("Elegir ciudad para ver restaurantes.")
     seleccion_ciudad = st.selectbox("Selecciona la ciudad:", ['New Delhi','Gurgaon', 'Noida', 'Faridabad', 'Ghaziabad '])
 
+    """
     if st.button("Buscar"):
         hallar_restaurantes = datos[datos['City'] == seleccion_ciudad]
         if hallar_restaurantes.empty:
@@ -155,5 +156,5 @@ def elegir_restaurantes():
             plt.xlabel('City')
             plt.ylabel('Frecuencia')
             plt.xticks(rotation=45)  # Rotar las etiquetas del eje x si son muchas o muy largas
-            st.pyplot(plt)
+            st.pyplot(plt) """
             
