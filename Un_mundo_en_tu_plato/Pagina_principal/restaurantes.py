@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.spatial.distance import cdist
+import streamlit as st
 
 import geopandas as gpd
 
@@ -15,3 +16,30 @@ datos['Longitude'] = pd.to_numeric(datos['Longitude'])
 datos['Price range'] = pd.to_numeric(datos['Price range'])
 datos['Aggregate rating'] = pd.to_numeric(datos['Aggregate rating'])
 datos['Votes'] = pd.to_numeric(datos['Votes'])
+
+
+def elegir_restaurantes():
+    """ 
+    Muestra una interfaz de usuario para elegir una una ciudad.
+
+    Args: None
+
+    Returns: None
+    """
+
+    st.title("Elegir ciudad para ver restaurantes.")
+    seleccion_ciudad = st.selectbox("Selecciona la ciudad:", ['New Delhi','Gurgaon', 'Noida', 'Faridabad', 'Ghaziabad '])
+    st.write(datos.head(2))
+    """
+    if st.button("Buscar"):
+        hallar_restaurantes = datos[datos['City'] == seleccion_ciudad]
+        if hallar_restaurantes.empty:
+            st.write("No se encontraron recetas.")
+        else:
+            plt.figure(figsize=(16, 8))
+            hallar_restaurantes.plot(kind='bar')
+            plt.title('Distribución de la columna City')
+            plt.xlabel('City')
+            plt.ylabel('Frecuencia')
+            plt.xticks(rotation=45)  # Rotar las etiquetas del eje x si son muchas o muy largas
+            st.pyplot(plt)"""

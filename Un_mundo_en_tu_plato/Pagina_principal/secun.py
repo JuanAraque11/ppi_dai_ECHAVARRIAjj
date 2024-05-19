@@ -2,6 +2,7 @@ import streamlit as st
 import funciones
 import pandas as pd
 import recetas
+import restaurantes
 import estadisticas
 
 # Menú de opciones desplegables
@@ -77,7 +78,7 @@ def main():
 
     elif opcion == "Distribuciones":
         st.write("")
-        funciones.elegir_restaurantes()
+        restaurantes.elegir_restaurantes()
 
 
 if __name__ == "__main__":

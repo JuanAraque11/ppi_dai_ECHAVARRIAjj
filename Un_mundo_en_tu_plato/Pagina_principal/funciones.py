@@ -130,31 +130,4 @@ def elegir_receta():
         else:
             st.write("Recetas encontradas:")
             st.write(recetas[['Nombre', 'Tipo', 'Ingredientes', 'Dificultad','Link_receta']])
-
-
-def elegir_restaurantes():
-    """ 
-    Muestra una interfaz de usuario para elegir una una ciudad.
-
-    Args: None
-
-    Returns: None
-    """
-
-    st.title("Elegir ciudad para ver restaurantes.")
-    seleccion_ciudad = st.selectbox("Selecciona la ciudad:", ['New Delhi','Gurgaon', 'Noida', 'Faridabad', 'Ghaziabad '])
-
-    """
-    if st.button("Buscar"):
-        hallar_restaurantes = datos[datos['City'] == seleccion_ciudad]
-        if hallar_restaurantes.empty:
-            st.write("No se encontraron recetas.")
-        else:
-            plt.figure(figsize=(16, 8))
-            hallar_restaurantes.plot(kind='bar')
-            plt.title('Distribución de la columna City')
-            plt.xlabel('City')
-            plt.ylabel('Frecuencia')
-            plt.xticks(rotation=45)  # Rotar las etiquetas del eje x si son muchas o muy largas
-            st.pyplot(plt) """
             
