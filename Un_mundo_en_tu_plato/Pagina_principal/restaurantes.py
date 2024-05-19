@@ -41,13 +41,3 @@ def elegir_restaurantes():
     st.write(NewDelhi[['Restaurant Name', 'City', 'Address', 'Votes']])
     if st.button("Buscar"):
         hallar_restaurantes = datos[datos['City'] == seleccion_ciudad]
-        if hallar_restaurantes.empty:
-            st.write("No se encontraron recetas.")
-        else:
-            plt.figure(figsize=(16, 8))
-            hallar_restaurantes.plot(kind='bar')
-            plt.title('Distribución de la columna City')
-            plt.xlabel('City')
-            plt.ylabel('Frecuencia')
-            plt.xticks(rotation=45)  # Rotar las etiquetas del eje x si son muchas o muy largas
-            st.pyplot(plt)
