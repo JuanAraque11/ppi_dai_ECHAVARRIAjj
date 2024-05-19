@@ -59,7 +59,7 @@ def triangulacion(df):
     plt.xlabel('Longitud')
     plt.ylabel('Latitude')
     plt.title('Triangulación de Delaunay')
-    plt.show()
+    st.pyplot(plt)
 
 
 def casco(df):
@@ -86,7 +86,7 @@ def casco(df):
     plt.xlabel('Longitude')
     plt.ylabel('Latitude')
     plt.title('Casco Convexo')
-    plt.show()
+    st.pyplot(plt)
 
 
 def graficar_mapa(df):
@@ -121,7 +121,7 @@ def elegir_restaurantes():
             st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
             st.plotly_chart(mapa)
 
-            st.write(f"Otros datos estadisticos de {seleccion_ciudad}:")
+            st.write(f"Otros datos estadisticos de {seleccion_ciudad}")
             triangulacion(NewDelhi)
             casco(NewDelhi) 
 
