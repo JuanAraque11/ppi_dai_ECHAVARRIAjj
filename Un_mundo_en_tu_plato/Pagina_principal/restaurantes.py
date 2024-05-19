@@ -121,7 +121,7 @@ def elegir_restaurantes():
             st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
             st.plotly_chart(mapa)
 
-            st.write(f"Otros datos estadisticos de {seleccion_ciudad}")
+            st.title(f"Otros datos estadisticos de {seleccion_ciudad}")
             triangulacion(NewDelhi)
             casco(NewDelhi) 
 
@@ -130,7 +130,7 @@ def elegir_restaurantes():
             st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
             st.plotly_chart(mapa)
             
-            st.write(f"Otros datos estadisticos de {seleccion_ciudad}")
+            st.title(f"Otros datos estadisticos de {seleccion_ciudad}")
             triangulacion(Gurgaon)
             casco(Gurgaon)
 
@@ -139,7 +139,7 @@ def elegir_restaurantes():
             st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
             st.plotly_chart(mapa)
 
-            st.write(f"Otros datos estadisticos de {seleccion_ciudad}")
+            st.title(f"Otros datos estadisticos de {seleccion_ciudad}")
             triangulacion(Noida)
             casco(Noida)
 
@@ -148,7 +148,7 @@ def elegir_restaurantes():
             st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
             st.plotly_chart(mapa)
 
-            st.write(f"Otros datos estadisticos de {seleccion_ciudad}")
+            st.title(f"Otros datos estadisticos de {seleccion_ciudad}")
             triangulacion(Faridabad)
             casco(Faridabad)
 
@@ -157,6 +157,6 @@ def elegir_restaurantes():
             st.title(f"Mapa interactivo de restaurantes en {seleccion_ciudad}")
             st.plotly_chart(mapa)
 
-            st.write(f"Otros datos estadisticos de {seleccion_ciudad}:")
+            st.title(f"Otros datos estadisticos de {seleccion_ciudad}:")
             triangulacion(Ghaziabad)
             casco(Ghaziabad)
