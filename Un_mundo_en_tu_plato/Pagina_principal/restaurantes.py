@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from scipy.spatial.distance import cdist
+import scipy.spatial as spt
 import streamlit as st
 
 import geopandas as gpd
@@ -34,6 +34,70 @@ Gurgaon = datos[datos['City'] == 'Gurgaon']
 Faridabad = datos[datos['City'] == 'Faridabad']
 Ghaziabad = datos[datos['City'] == 'Ghaziabad']
 
+
+
+def triangulacion(df):
+    """ Muestra la triangulación de Delaunay de un dataframe.
+
+    Args: df: DataFrame
+
+    Returns: None
+    """
+    points = df[['Longitude', 'Latitude']].to_numpy()
+
+    # Aplicar la triangulación de Delaunay
+    triangulation = spt.Delaunay(points)
+
+    # Graficar la triangulación de Delaunay
+    plt.triplot(points[:, 0], points[:, 1], triangulation.simplices)
+
+    # Mostrar los vertices
+    plt.plot(points[:, 0], points[:,1], '*')
+
+    plt.xlabel('Longitud')
+    plt.ylabel('Latitude')
+    plt.title('Triangulación de Delaunay')
+    plt.show()
+
+
+def casco(df):
+    """ Muestra el casco convexo de los puntos de un dataframe.
+
+    Args: df: DataFrame
+
+    Returns: None
+    """
+    points = df[['Longitude', 'Latitude']].to_numpy()
+    # Calcular el casco convexo
+    casco = spt.ConvexHull(points)
+    puntos_casco = casco.simplices
+
+    # Graficar el casco convexo
+    for s in puntos_casco:
+        plt.plot(points[s, 0], points[s, 1], 'k-')
+
+    # Graficar los puntos originales
+    plt.plot(points[:,0], points[:,1], 'o')
+
+    plt.xlabel('Longitude')
+    plt.ylabel('Latitude')
+    plt.title('Casco Convexo')
+    plt.show()
+
+
+def graficar_mapa(df):
+    fig = px.scatter_mapbox(df, 
+                            lat="Latitude", 
+                            lon="Longitude",
+                            hover_name="Restaurant Name",
+                            hover_data={"Address": True}, 
+                            zoom=10, 
+                            height=600)
+
+    fig.update_layout(mapbox_style="open-street-map")
+    fig.update_layout(title="Mapa de Restaurantes")
+    
+    return fig
 
 def elegir_restaurantes():
     """ 
