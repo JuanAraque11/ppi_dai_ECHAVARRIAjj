@@ -24,9 +24,13 @@ datos['Address'] = datos['Address'].astype('string')
 # Eliminar las columnas de latitud y longitud con valores nulos
 datos = datos[(datos['Longitude'] != 0) | (datos['Latitude'] != 0)]
 
-NewDelhi = datos[(datos['City'] == 'New Delhi') & (datos['Longitude'] != 34.0)]
+Noida = datos[datos['City'] == 'Noida']
+Noida = Noida[Noida['Longitude'] != 0.0]
+
+NewDelhi = datos[datos['City'] == 'New Delhi']
+NewDelhi = NewDelhi[NewDelhi['Longitude'] != 34.0]
+
 Gurgaon = datos[datos['City'] == 'Gurgaon']
-Noida = datos[(datos['City'] == 'Noida') & (datos['Longitude'] != 0.0)]
 Faridabad = datos[datos['City'] == 'Faridabad']
 Ghaziabad = datos[datos['City'] == 'Ghaziabad']
 
