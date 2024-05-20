@@ -11,7 +11,7 @@ import estadisticas
 
 # Menú de opciones desplegables
 opcion = st.sidebar.selectbox("Selecciona una opción:",
-                              ["Información", "Guardar Recetas",
+                              ["Información",
                                "Consultar Información de los Platos",
                                "Estadísticas de recetas", "Carga tus recetas",
                                "Elegir recetas", "Distribuciones"])
@@ -30,8 +30,6 @@ def main():
         # Título de la página
         st.title("Contenido")
         funciones.mostrar_inicio()
-    elif opcion == "Guardar Recetas":
-        st.write("En proceso...")
     elif opcion == "Consultar Información de los Platos":
         # Título de la página
         st.title("Calculadora de Ingredientes")
