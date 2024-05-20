@@ -115,7 +115,11 @@ def elegir_restaurantes():
     """
 
     st.title("Elegir ciudad para ver restaurantes.")
-    seleccion_ciudad = st.selectbox("Selecciona la ciudad:", ['New Delhi','Gurgaon', 'Noida', 'Faridabad', 'Ghaziabad'])
+    seleccion_ciudad = st.selectbox("Selecciona la ciudad:", ['New Delhi',
+                                                              'Gurgaon',
+                                                              'Noida',
+                                                              'Faridabad',
+                                                              'Ghaziabad'])
     
     if st.button("Buscar"):
         if seleccion_ciudad == 'New Delhi':

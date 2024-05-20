@@ -37,17 +37,21 @@ def main():
         st.title("Calculadora de Ingredientes")
 
         # Solicitar información al usuario
-        plato = st.selectbox("Selecciona un plato:", list(funciones.recetas.keys()))
-        num_personas = st.number_input("Número de personas que van a comer:", min_value=1, value=1)
+        plato = st.selectbox("Selecciona un plato:",
+                             list(funciones.recetas.keys()))
+        num_personas = st.number_input("Número de personas que van a comer:",
+                                       min_value=1, value=1)
 
         # Calcular ingredientes y mostrar resultado
         if st.button("Calcular"):
-            cantidad_ingredientes = funciones.calcular_ingredientes(plato, num_personas)
+            cantidad_ingredientes = funciones.calcular_ingredientes(plato,
+                                                                    num_personas)
             st.write("Cantidad de Ingredientes Necesarios:")
             for ingrediente, cantidad in cantidad_ingredientes.items():
                 st.write(f"- {ingrediente}: {cantidad} gramos")
     elif opcion == "Estadísticas de recetas":
-        st.title("Aqui puedes ver las estadísticas de las recetas existentes en la app.")
+        st.title("Aqui puedes ver las estadísticas de las recetas existentes\
+         en la app.")
         
         estadisticas.distri_categorias()
 

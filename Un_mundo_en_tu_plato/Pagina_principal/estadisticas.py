@@ -17,7 +17,8 @@ def distri_categorias():
     """
     st.write("Distribución de categorías:")
     plt.figure(figsize=(10, 6))
-    sns.countplot(y='Categoria', data=data, order=data['Categoria'].value_counts().index)
+    sns.countplot(y='Categoria', data=data,
+                  order=data['Categoria'].value_counts().index)
     plt.title('Distribución de Categorías')
     plt.xlabel('Frecuencia')
     plt.ylabel('Categoría')
@@ -51,7 +52,8 @@ def distri_valoraciones():
 
 def valoracion_por_dificultad():
     """
-    Muestra una gráfica de barras de la valoración por la dificultad de las recetas.
+    Muestra una gráfica de barras de la valoración por la dificultad de las
+    recetas.
 
     Args: None
 
@@ -69,6 +71,7 @@ def valoracion_por_dificultad():
     # Limpiar la figura para evitar problemas con gráficos futuros
     plt.clf()
 
+
 def top_recetas_reviews():
     """
     Muestra las 10 recetas con más valoraciones.
@@ -80,7 +83,8 @@ def top_recetas_reviews():
     st.write("Top 10 recetas con más valoraciones:")
     top_reviews = data.nlargest(10, 'Num_reviews')
     plt.figure(figsize=(10, 6))
-    sns.barplot(y='Nombre', x='Num_reviews', data=top_reviews, palette='Purples_d')
+    sns.barplot(y='Nombre', x='Num_reviews', data=top_reviews,
+                palette='Purples_d')
     plt.title('Top 10 Recetas con Más Reviews')
     plt.xlabel('Número de Reviews')
     plt.ylabel('Nombre de la Receta')
@@ -88,6 +92,7 @@ def top_recetas_reviews():
 
     # Limpiar la figura para evitar problemas con gráficos futuros
     plt.clf()
+
 
 def top_recetas_comentadas():
     """ 
@@ -100,7 +105,8 @@ def top_recetas_comentadas():
     st.write("Top 10 recetas con más comentarios:")
     top_comentadas = data.nlargest(10, 'Num_comentarios')
     plt.figure(figsize=(10, 6))
-    sns.barplot(y='Nombre', x='Num_comentarios', data=top_comentadas, palette='viridis')
+    sns.barplot(y='Nombre', x='Num_comentarios', data=top_comentadas,
+                palette='viridis')
     plt.title('Top 10 Recetas Más Comentadas')
     plt.xlabel('Número de Comentarios')
     plt.ylabel('Nombre de la Receta')

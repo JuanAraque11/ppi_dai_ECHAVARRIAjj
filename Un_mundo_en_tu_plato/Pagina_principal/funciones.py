@@ -8,8 +8,6 @@ from recetas import data, reemplazar_nulos
 from restaurantes import datos
 
 
-
-
 def mostrar_inicio():
     """
     Muestra el contenido de la página de inicio.
@@ -26,45 +24,6 @@ def mostrar_inicio():
     detallada sobre los platos disponibles.")
     st.write("- Ver Distribuciones Estadísticas: Muestra distribuciones\
     estadísticas sobre los platos.")
-
-
-""" def mostrar_grafico_popularidad(platos, popularidad):
-    # Crear gráfico de barras
-    plt.bar(platos, popularidad)
-    plt.xlabel("Plato")
-    plt.ylabel("Popularidad")
-    plt.title("Popularidad de Platos")
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-
-    # Mostrar gráfico en Streamlit
-    st.pyplot() """
-
-
-"""def visualizar_distribucion_recetas(recetas):
-    # Cargar datos geoespaciales de los países
-    world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
-
-    # Contar la cantidad de recetas por país
-    recetas_por_pais = {}
-    for receta, pais in recetas.items():
-        recetas_por_pais[pais] = recetas_por_pais.get(pais, 0) + 1
-
-    # Agregar los datos de recetas por país al dataframe de los países
-    world['recetas'] = world['name'].map(recetas_por_pais)
-
-    # Crear un mapa interactivo
-    st.title("Distribución Geográfica de Recetas")
-
-    # Mostrar el mapa interactivo
-    fig, ax = plt.subplots(figsize=(10, 6))
-    world.plot(column='recetas', cmap='YlGn', linewidth=0.8, ax=ax, 
-    edgecolor='0.8', legend=True)
-    ax.set_title('Distribución Geográfica de Recetas')
-    ax.set_axis_off()
-
-    # Mostrar el mapa en Streamlit
-    st.pyplot(fig) """
 
 
 # Ejemplo de uso:
@@ -124,14 +83,21 @@ def elegir_receta():
     reemplazar_nulos()
 
     st.title("Elegir recetas")
-    seleccion_tipo = st.selectbox("Selecciona el tipo de receta:", ['Acompañamiento','Cena', 'Cumpleaños', 'Desayuno', 'Entrante', 'Merienda', 'Plato principal', 'Postre'])
-    seleccion_difi = st.selectbox("Selecciona la dificultad de la receta:", ['muy baja', 'baja', 'media', 'alta', 'muy alta'])
+    seleccion_tipo = st.selectbox("Selecciona el tipo de receta:",
+                                  ['Acompañamiento','Cena', 'Cumpleaños',
+                                   'Desayuno', 'Entrante', 'Merienda',
+                                   'Plato principal', 'Postre'])
+    seleccion_difi = st.selectbox("Selecciona la dificultad de la receta:",
+                                  ['muy baja', 'baja', 'media', 'alta',
+                                   'muy alta'])
 
     if st.button("Buscar"):
-        recetas = data[(data['Tipo'] == seleccion_tipo) & (data['Dificultad'] == seleccion_difi)]
+        recetas = data[(data['Tipo'] == seleccion_tipo) &
+                       (data['Dificultad'] == seleccion_difi)]
         if recetas.empty:
             st.write("No se encontraron recetas.")
         else:
             st.write("Recetas encontradas:")
-            st.write(recetas[['Nombre', 'Tipo', 'Ingredientes', 'Dificultad','Link_receta']])
-            
+            st.write(recetas[['Nombre', 'Tipo', 'Ingredientes',
+                              'Dificultad','Link_receta']])
+        
