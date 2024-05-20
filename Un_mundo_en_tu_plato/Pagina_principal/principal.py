@@ -27,7 +27,7 @@ def main():
         st.session_state.aceptado = False
 
     # Verificar si el usuario acepta los términos y condiciones
-    ver_terminos = st.button("Ver Términos y Condiciones")
+    ver_terminos = st.button("Ver términos y condiciones")
 
     # Actualización de la variable "visible" según el estado del botón
     if ver_terminos:
