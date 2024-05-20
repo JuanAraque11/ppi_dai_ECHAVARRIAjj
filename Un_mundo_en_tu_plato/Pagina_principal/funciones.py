@@ -18,12 +18,16 @@ def mostrar_inicio():
     """
     st.write("Bienvenido al Inicio")
     st.write("Aquí encontrarás información sobre las funciones de la página:")
-    st.write("- Guardar Recetas: Permitirá a los usuarios guardar nuevas\
-              recetas en su cuenta.")
-    st.write("- Consultar Información de los Platos: Proporciona información\
+    st.write("- Consultar información de los platos: Proporciona información\
     detallada sobre los platos disponibles.")
-    st.write("- Ver Distribuciones Estadísticas: Muestra distribuciones\
-    estadísticas sobre los platos.")
+    st.write("- Ver distribuciones estadísticas: Muestra distribuciones\
+    estadísticas sobre los platos disponibles.")
+    st.write("- Cargar tus propias recetas: Permite cargar tus propias\
+    recetas.")
+    st.write("- Elgir recetas: Permite elegir una receta de la base de\
+    datos.")
+    st.write("- Restaurantes: Muestra información sobre los restaurantes\
+    disponibles.")
 
 
 # Ejemplo de uso:
