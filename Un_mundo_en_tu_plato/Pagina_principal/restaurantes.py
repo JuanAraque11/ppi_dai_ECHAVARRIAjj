@@ -63,6 +63,9 @@ def triangulacion(df):
     plt.title('Triangulación de Delaunay')
     st.pyplot(plt)
 
+    # Limpiar la figura para evitar problemas con gráficos futuros
+    plt.clf()
+
 
 def casco(df):
     """ Muestra el casco convexo de los puntos de un dataframe.
@@ -89,6 +92,9 @@ def casco(df):
     plt.ylabel('Latitude')
     plt.title('Casco Convexo')
     st.pyplot(plt)
+
+    # Limpiar la figura para evitar problemas con gráficos futuros
+    plt.clf()
 
 
 def graficar_mapa(df):
