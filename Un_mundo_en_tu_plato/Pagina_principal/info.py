@@ -78,7 +78,7 @@ def terminos_condiciones():
 
     Returns: None
     """
-    st.title("Términos y Condiciones")
+    st.title("Términos y condiciones")
 
     st.write('''
     Política de tratamiento de datos personales para los usuarios de Un\
