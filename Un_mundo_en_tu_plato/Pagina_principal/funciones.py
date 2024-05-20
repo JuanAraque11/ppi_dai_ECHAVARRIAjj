@@ -1,9 +1,13 @@
+# Librerías de terceros
 import streamlit as st
 import numpy as np
+import matplotlib.pyplot as plt
+
+# Librerías propias
 from recetas import data, reemplazar_nulos
 from restaurantes import datos
-# import geopandas as gpd
-import matplotlib.pyplot as plt
+
+
 
 
 def mostrar_inicio():

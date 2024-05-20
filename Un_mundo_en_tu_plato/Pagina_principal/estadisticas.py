@@ -1,8 +1,11 @@
+# Librerías de terceros
 import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# Librerías propias
 from recetas import data
+
 
 def distri_categorias():
     """

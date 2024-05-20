@@ -1,8 +1,12 @@
+# Librerías de terceros
 import streamlit as st
+
+# Librerías propias
 import info
 import login
 import recetas
 import register
+
 
 # Función principal
 def main():

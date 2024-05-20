@@ -1,9 +1,13 @@
+# Librerías de terceros
 import streamlit as st
-import funciones
 import pandas as pd
+
+# Librerías propias
+import funciones
 import recetas
 import restaurantes
 import estadisticas
+
 
 # Menú de opciones desplegables
 opcion = st.sidebar.selectbox("Selecciona una opción:",

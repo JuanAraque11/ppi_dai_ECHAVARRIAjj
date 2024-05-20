@@ -1,5 +1,7 @@
+# Librerías de terceros
 import pandas as pd
 import streamlit as st
+
 
 # Guardar en la variable 'ruta' la url del dataset
 ruta = "https://raw.githubusercontent.com/JuanAraque11/ppi_dai_ECHAVARRIAjj/main/Un_mundo_en_tu_plato/Datos/recetas.csv"
