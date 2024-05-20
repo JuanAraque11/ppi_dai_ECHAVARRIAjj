@@ -14,7 +14,7 @@ opcion = st.sidebar.selectbox("Selecciona una opción:",
                               ["Información",
                                "Consultar Información de los Platos",
                                "Estadísticas de recetas", "Carga tus recetas",
-                               "Elegir recetas", "Distribuciones"])
+                               "Elegir recetas", "Restaurantes"])
 
 def main():
     """
@@ -82,8 +82,9 @@ def main():
     elif opcion == "Elegir recetas":
         funciones.elegir_receta()
 
-    elif opcion == "Distribuciones":
-        st.write("")
+    elif opcion == "Restaurantes":
+        st.title("Aqui puede ver la ubicación de los mejores restaurantes\
+        en la app.")
         restaurantes.elegir_restaurantes()
 
 
