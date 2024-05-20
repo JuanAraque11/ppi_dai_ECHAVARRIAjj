@@ -91,7 +91,7 @@ def main():
             if buscar_button:
                 recetas_encontradas = recetas.buscar_receta_por_ingrediente(ingrediente_busqueda)
                 if recetas_encontradas.empty:
-                    st.write("No se encontraron recetas con ese ingrediente.")
+                    st.write(f"No se encontraron recetas con el ingrediente: {ingrediente_busqueda}.")
                 else:
                     st.write("Recetas encontradas:")
                     st.write(recetas_encontradas[['Nombre', 'Tiempo',
