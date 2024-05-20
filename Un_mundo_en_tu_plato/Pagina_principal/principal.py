@@ -126,8 +126,8 @@ def main():
                                                 'Link_receta']])
     else:
         # Mostrar mensaje para aceptar los términos y condiciones
-        st.warning("Debe aceptar los Términos y Condiciones para utilizar la\
-                    aplicación.")
+        st.warning("Debe aceptar los términos y condiciones para utilizar la\
+                    aplicación Un mundo en tu plato.")
 
 
 
