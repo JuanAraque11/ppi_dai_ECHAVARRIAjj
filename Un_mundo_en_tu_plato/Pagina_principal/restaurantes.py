@@ -98,6 +98,13 @@ def casco(df):
 
 
 def graficar_mapa(df):
+    """ Muestra los puntos de un dataset en un mapa real
+
+    Args: df: dataset
+
+    Returns: fig: Mapa con los puntos ubicados
+    
+    """
     fig = px.scatter_mapbox(df, 
                             lat="Latitude", 
                             lon="Longitude",
